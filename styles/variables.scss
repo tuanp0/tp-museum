@@ -1,0 +1,17 @@
+:root {
+  --background: rgba(255, 255, 255, 1);
+  --white: rgba(255, 255, 255, 1);
+  --black: rgba(0, 0, 0, 1);
+  --text: rgba(0, 0, 0, 1);
+
+  --padding: 1rem;
+  --maxwidth: 1440px;
+
+  @media screen and (min-width:768px) {
+    --padding: 2rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+
+  }
+}
