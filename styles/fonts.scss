@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('./fonts/MuseoModerno-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('./fonts/MuseoModerno-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin qsand($weight:400) {
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin museo($weight:400) {
+    font-family: 'MuseoModerno', Arial, sans-serif;
+    font-weight: $weight;
+}
