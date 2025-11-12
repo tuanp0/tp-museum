@@ -3,14 +3,15 @@ import React, { FC, ReactNode } from 'react'
 import styles from './Container.module.scss'
 
 interface ContainerProps {
-    children: ReactNode,
+    className?: string,
     noPadding?: boolean,
+    children: ReactNode,
 }
 
 
-const Container: FC<ContainerProps> = ({ children, noPadding }) => {
+const Container: FC<ContainerProps> = ({ className, noPadding, children }) => {
   return (
-    <div className={`${styles.container} ${noPadding && styles.nopadding}`}>
+    <div className={`${styles.container} ${className} ${noPadding && styles.nopadding}`}>
         {children}
     </div>
   )

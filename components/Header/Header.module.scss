@@ -1,3 +1,59 @@
+// @use '../../styles.global.scss' as *;
+
 .header {
-    padding: 1rem 0;
+    background: var(--sand);
+    border-top: 8px solid var(--brown);
+    padding: 1.5rem 0;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &Title {
+        margin: 0;
+    }
+
+    &Logo {
+        width: 270px;
+        height: auto;
+        display: block;
+    }
+
+    &Span {
+        font-size: 0;
+        display: none;
+    }
+
+    &Rs {
+        // width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &Item {
+            padding: 0.375rem;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &X,
+        &Ig,
+        &Fb {
+            width: auto;
+            height: 22px;
+            display: block;
+        }
+
+        &Yt {
+            width: auto;
+            height: 33px;
+            display: block;
+        }
+    }
 }
