@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = (): void => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -35,22 +35,23 @@ const Header = () => {
           <div className={styles.headerLinks}>
             <div className={styles.headerRs}>
               <Link href={`#`} title={`X Twitter`} className={styles.headerRsItem}>
-                <Image src={`./x.svg`} alt={`X Twitter`} width={280} height={78} className={styles.headerRsX} />
+                <Image src={`/x.svg`} alt={`X Twitter`} width={280} height={78} className={styles.headerRsX} />
               </Link>
               <Link href={`#`} title={`Instagram`} className={styles.headerRsItem}>
-                <Image src={`./ig.svg`} alt={`Instagram`} width={280} height={78} className={styles.headerRsIg} />
+                <Image src={`/ig.svg`} alt={`Instagram`} width={280} height={78} className={styles.headerRsIg} />
               </Link>
               <Link href={`#`} title={`Facebook`} className={styles.headerRsItem}>
-                <Image src={`./fb.svg`} alt={`Facebook`} width={280} height={78} className={styles.headerRsFb} />
+                <Image src={`/fb.svg`} alt={`Facebook`} width={280} height={78} className={styles.headerRsFb} />
               </Link>
               <Link href={`#`} title={`YouTube`} className={styles.headerRsItem}>
-                <Image src={`./yt.svg`} alt={`YouTube`} width={280} height={78} className={styles.headerRsYt} />
+                <Image src={`/yt.svg`} alt={`YouTube`} width={280} height={78} className={styles.headerRsYt} />
               </Link>
             </div>
             <nav className={styles.headerMenu}>
               <ul className={styles.headerMenuUl}>
                 <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le musée</Link></li>
                 <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Librarie</Link></li>
+                <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Café</Link></li>
                 <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Accès</Link></li>
                 <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Contact</Link></li>
               </ul>

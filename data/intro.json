@@ -1,0 +1,10 @@
+{
+  "title": "Bienvenue !",
+  "subtitle": {
+    "span": "Musée - Librairie - Café",
+    "text": "Ville de Tuan, la capitale culturelle fictive"
+  },
+  "news": {
+    "openText": "Le musée est ouvert aujourd'hui de {time}"
+  }
+}
