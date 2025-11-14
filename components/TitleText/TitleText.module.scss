@@ -1,0 +1,39 @@
+@use '../../styles/fonts.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.musee {
+    background: var(--sand);
+
+    &Content {
+        @media screen and (min-width:768px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width:992px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+    }
+
+    &Title {
+        @include wysiwyg();
+        text-align: center;
+
+        @media screen and (min-width:992px) {
+            width: 33%;
+        }
+    }
+
+    &Text {
+        @include wysiwyg();
+
+        @media screen and (min-width:992px) {
+            width: calc(64% - 4rem);
+            margin-top: 7rem;
+        }
+    }
+}

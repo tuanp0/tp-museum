@@ -4,6 +4,11 @@
     "span": "Musée - Librairie - Café",
     "text": "Ville de Tuan, la capitale culturelle fictive"
   },
+  "image": {
+    "src": "/museum.png",
+    "alt": "Museum",
+    "author": "Heriberto Murrieta / Unsplash"
+  },
   "news": {
     "openText": "Le musée est ouvert aujourd'hui de {time}"
   }

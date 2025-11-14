@@ -5,7 +5,7 @@ import styles from './Container.module.scss'
 interface ContainerProps {
     className?: string,
     noPadding?: boolean,
-    children: ReactNode,
+    children?: ReactNode,
 }
 
 

@@ -3,11 +3,8 @@
 .intro {
     position: relative;
     background: var(--sand);
-
-    // @media screen and (min-width:768px) {
-        min-height: 100vh;
-        min-height: 100dvh;
-    // }
+    min-height: 100vh;
+    min-height: 100dvh;
 
     .container {
         padding-bottom: 5rem;
@@ -58,6 +55,7 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
+        position: relative;
 
         @media screen and (min-width: 992px) {
             width: 100%;
@@ -74,10 +72,16 @@
 
     &News {
         position: sticky;
-        bottom: 70px;
+        height: 0;
+        bottom: 0;
         padding: 0 var(--padding);
         max-width: var(--max-width);
         text-align: center;
+        transform: translateY(-100px);
+
+        @media screen and (min-width:992px) {
+            transform: translateY(-75px);
+        }
 
         &Content {
             border-radius: 14px;

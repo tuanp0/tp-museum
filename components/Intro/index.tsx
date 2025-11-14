@@ -28,7 +28,8 @@ const Intro = () => {
           </p>
         </Container>
         <div className={styles.introMuseum}>
-          <Image src={`/museum.png`} alt={`Museum`} width={1000} height={600} className={styles.introMuseumImg} />
+          <Image src={introData.image.src} alt={introData.image.alt} width={833} height={600} className={styles.introMuseumImg} />
+          <span className={`author ${styles.introMuseumAuthor}`}>{introData.image.author}</span>
         </div>
         <div className={styles.introNews}>
           <div className={styles.introNewsContent}>
