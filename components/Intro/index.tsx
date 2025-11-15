@@ -6,8 +6,8 @@ import Container from '@/components/Container'
 import styles from './Intro.module.scss'
 
 const Intro = () => {
-  const today = new Date();
-  const dayName = today.toLocaleDateString('fr-FR');
+  const today = new Date()
+  const dayName = today.toLocaleDateString('fr-FR')
 
   return (
     <section className={styles.intro}>

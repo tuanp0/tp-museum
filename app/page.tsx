@@ -12,7 +12,9 @@ export default function Home() {
     <main className={styles.main}>
       <Intro />
       <TitleText title={histoireData.title} text={histoireData.text} />
-      <BgContent data={MuseeData} />
+      <BgContent data={MuseeData} bg={'blue'} />
+      <BgContent data={MuseeData} bg={'green'} />
+      <BgContent data={MuseeData} bg={'brown'} />
     </main>
-  );
+  )
 }
