@@ -1,0 +1,40 @@
+@use '../../styles/fonts.scss' as *;
+
+.slidercards {
+    &Slide {
+        background: var(--white);
+        border-radius: 0 0 16px 0;
+    }
+
+    &Imgcontainer {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &Img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &Content {
+        padding: 1rem;
+    }
+
+    &Title {
+        @include museo(700);
+        font-size: 1.25rem;
+    }
+
+    &Category {
+        @include qsand();
+        font-style: italic;
+    }
+
+    &Date {
+
+    }
+}
