@@ -1,0 +1,34 @@
+{
+  "title": "<h2>Le Café</h2>",
+  "image": {
+    "src": "/arts.png",
+    "alt": "Arts",
+    "width": 1500,
+    "height": 971,
+    "author": "Cameron Mourot / Unsplash"
+  },
+  "slider": [
+    {
+      "src": "./art/diwei-zhu-NAOlAo6ufxA-unsplash.jpg",
+      "alt": "Installation suspendue",
+      "width":  "640",
+      "height": "480",
+      "author": "Diwei Zhu / Unsplash",
+      "title": "Perspective suspendue",
+      "category": "Installation mobile",
+      "date": "Permanente",
+      "link": ""
+    },
+    {
+      "src": "./art/birmingham-museums-trust-8wcoY3wcbL0-unsplash.jpg",
+      "alt": "peinture d'un troupeau de moutons sur la route",
+      "width":  "640",
+      "height": "517",
+      "author": "Birmingham Museums Trust / Unsplash",
+      "title": "Troupeau de moutons",
+      "category": "Art",
+      "date": "Permanente",
+      "link": ""
+    }
+  ]
+}

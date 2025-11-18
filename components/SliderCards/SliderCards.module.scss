@@ -1,9 +1,17 @@
 @use '../../styles/fonts.scss' as *;
 
 .slidercards {
+    &Slider {
+        width: calc(100% + (50dvw - 50%) - (var(--padding)/2));
+
+        @media screen and (min-width: 768px) {
+            width: calc(100% + (50dvw - 50%) - (var(--padding)/2) + 8px);
+        }
+    }
+
     &Slide {
         background: var(--white);
-        border-radius: 0 0 16px 0;
+        border-radius: 0 0 24px 0;
     }
 
     &Imgcontainer {
@@ -37,4 +45,53 @@
     &Date {
 
     }
+
+    &Nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+        padding: 2rem 0;
+
+        [disabled] {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        &Prev,
+        &Next {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            border: 1px solid var(--white);
+            background: var(--white);
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                background: transparent;
+
+                .slidercardsNavArrow {
+                    path {
+                        stroke: var(--white);
+                    }
+                }
+            }
+        }
+
+        &Arrow {
+            width: 36px;
+            height: auto;
+            display: block;
+
+            path {
+                stroke: var(--black);
+                transition: 0.3s ease-in-out;
+            }
+        }
+    }
+
+ 
 }

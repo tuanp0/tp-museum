@@ -1,0 +1,74 @@
+@use '../../styles/fonts.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.musee {
+    position: relative;
+    background: var(--sand);
+    padding-bottom: 5rem;
+
+    &Waves {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        
+        path {
+            fill: var(--sand);
+        }
+    }
+
+    &Container {
+        @media screen and (min-width:768px) {
+            width: 84%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 3rem;
+        }
+
+        @media screen and (min-width:992px) {
+            width: 70%;
+        }
+    }
+
+    &Content {
+        margin-bottom: 3rem;
+
+        @media screen and (min-width:768px) {
+            width: 60%;
+            margin-bottom: 0;
+        }
+    }
+
+    &Title {
+        @include wysiwyg();
+        text-align: center;
+    }
+
+    &Text {
+        @include wysiwyg();
+    }
+
+    &Visuel {
+        position: relative;
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+
+        @media screen and (min-width:768px) {
+            width: calc(40% - 3rem);
+            margin: 6rem 0 0 0;
+        }
+    }
+
+    &Img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}

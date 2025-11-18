@@ -31,12 +31,14 @@ const Intro = () => {
           <Image src={introData.image.src} alt={introData.image.alt} width={833} height={600} className={styles.introMuseumImg} />
           <span className={`author ${styles.introMuseumAuthor}`}>{introData.image.author}</span>
         </div>
+
         <div className={styles.introNews}>
           <div className={styles.introNewsContent}>
             <span className={styles.introNewsDate}>{dayName}</span>
             <p className={styles.introNewsText}>{introData.news.openText.replace('{time}', '9:00 à 19:00')}</p>
           </div>
         </div>
+
     </section>
   )
 }

@@ -1,15 +1,17 @@
 :root {
   --background: rgba(255, 255, 255, 1);
   --white: rgba(255, 255, 255, 1);
+  --white30: rgba(255, 255,255, 0.3);
   --black: rgba(0, 0, 0, 1);
   --black20: rgba(0, 0, 0, .2);
   --black60: rgba(0, 0, 0, .6);
   --text: rgba(0, 0, 0, 1);
   --darkgreen: rgb(28, 76, 28, 1);
-  --darkbrown: rgba(112, 69, 20, 1);
+  --darkbrown: rgb(67, 41, 11);
   --darkblue: rgba(12, 36, 61, 1);
-  --darkblue20: rgba(12, 36, 61, 0.2);
+  --darkblue30: rgba(12, 36, 61, 0.3);
   --sand: rgba(232, 227, 214, 1);
+  --sand60: rgba(232, 227, 214, 0.6);
 
   --padding: 1rem;
   --maxwidth: 1440px;

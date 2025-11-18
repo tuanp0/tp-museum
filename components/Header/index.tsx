@@ -63,9 +63,9 @@ const Header = () => {
               </div>
               <nav className={styles.headerMenu}>
                 <ul className={styles.headerMenuUl}>
-                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le musée</Link></li>
-                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Librarie</Link></li>
-                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Café</Link></li>
+                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le Musée</Link></li>
+                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>La Librarie</Link></li>
+                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le Café</Link></li>
                   <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Accès</Link></li>
                   <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Contact</Link></li>
                 </ul>

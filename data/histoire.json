@@ -1,4 +1,11 @@
 {
   "title": "<h2>Notre histoire</h2>",
-  "text": "<p>Depuis son ouvert officielle en <strong>Avril 2025</strong>, notre musée a pour but d'offrir la culture aux petits comme aux grands. Unique en son genre, il abrite des <strong>oeuvres classiques</strong>, organise des <strong>événements</strong> et propose des <strong>animations amusantes</strong>.</p><p>Reconnaissable à son <strong>architecture classique française</strong> du XVIIᵉ siècle, l'édifice se distingue par des formes très symétriques, des façades majestueuses et une grande richesse décorative. Les colonnes et pilastres rythment la façade, tandis que de larges fenêtres cintrées laissent entrer la lumière</p><p>TP Museum cache une <strong>librairie</strong> où des millions d'ouvrages sont disponibles et qui n'attendent que vous. Profitez d'un <strong>espace calme et serein</strong> pour découvrir sans limites.</p><p>Le café situé au dernier étage, vous permettra de vous restaurer ou de profiter des meilleures boissons que la planète peut nous offrir.</p>"
+  "text": "<p>Depuis son ouvert officielle en <strong>Avril 2025</strong>, notre musée a pour but d'offrir la culture aux petits comme aux grands. Unique en son genre, il abrite des <strong>oeuvres classiques</strong>, organise des <strong>événements</strong> et propose des <strong>animations amusantes</strong>.</p><p>Reconnaissable à son <strong>architecture classique française</strong> du XVIIᵉ siècle, l'édifice se distingue par des formes très symétriques, des façades majestueuses et une grande richesse décorative. Les colonnes et pilastres rythment la façade, tandis que de larges fenêtres cintrées laissent entrer la lumière</p><p>TP Museum cache une <strong>librairie</strong> où des millions d'ouvrages sont disponibles et qui n'attendent que vous. Profitez d'un <strong>espace calme et serein</strong> pour découvrir sans limites.</p><p>Le café situé au dernier étage, vous permettra de vous restaurer ou de profiter des meilleures boissons que la planète peut nous offrir.</p>",
+  "image": {
+    "src": "/museum/duminda-perera-k6le-Ist8C4-unsplash.jpg",
+    "alt": "Visiteurs du musée",
+    "width":  640,
+    "height": 1137,
+    "author": "Duminda Perera / Unsplash"
+  }
 }

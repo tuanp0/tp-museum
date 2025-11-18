@@ -10,7 +10,7 @@
         font-size: 3rem;
         color: var(--black);
         line-height: 1.25;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto 3rem auto;
         text-align: center;
         position: relative;
         display: inline-block;
@@ -27,8 +27,8 @@
 
         @media screen and (min-width:768px) {
             position: relative;
-            font-size: 4rem;
-            padding: 1rem 2rem;
+            font-size: 3.5rem;
+            padding: 1rem 2rem 0.75rem 2rem;
         }
 
         @media screen and (min-width:992px) {
