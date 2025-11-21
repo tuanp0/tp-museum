@@ -15,7 +15,7 @@
 
     &.scrolled {
         padding: .375rem 0;
-        background: var(--sand60);
+        background: var(--sky60);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
 
@@ -124,7 +124,7 @@
         top: 100%;
         right: 0;
         padding: 0 var(--padding);
-        background: var(--sand);
+        background: var(--sky);
         opacity: 0;
         box-shadow: 0 10px 16px -8px var(--black);
         border-radius: 0 0 8px 8px;

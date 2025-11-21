@@ -39,6 +39,7 @@ const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
       ${bg === 'blue' && styles.blue}
       ${bg === 'brown' && styles.brown}
       ${bg === 'green' && styles.green}
+      ${bg === 'paper' && styles.paper}
     `}>
       {waves && 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className={styles.bgcontentWaves}>
@@ -52,7 +53,7 @@ const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
           <path fill="url(#waveGradient)" fillOpacity="0.4">
             <animate 
               attributeName="d" 
-              dur="13s" 
+              dur="12s" 
               repeatCount="indefinite"
               values="
                 M0,160 Q360,80 720,160 T1440,160 L1440,320 L0,320 Z;
@@ -65,7 +66,7 @@ const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
           <path fill="rgba(232, 227, 214, 1)" fillOpacity="0.7">
             <animate 
               attributeName="d" 
-              dur="9s" 
+              dur="8s" 
               repeatCount="indefinite"
               values="
                 M0,192 Q360,112 720,192 T1440,192 L1440,320 L0,320 Z;
@@ -78,7 +79,7 @@ const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
           <path fill="rgba(232, 227, 214, 1)" fillOpacity="1">
             <animate 
               attributeName="d" 
-              dur="6s" 
+              dur="5s" 
               repeatCount="indefinite"
               values="
                 M0,280 Q360,240 720,280 T1440,280 L1440,320 L0,320 Z;

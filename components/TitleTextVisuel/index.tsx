@@ -33,7 +33,7 @@ const TitleTextVisuel = ({data}: TitleTextVisuelInterface) => {
         <path fill="url(#waveGradient)" fillOpacity="0.4">
           <animate 
             attributeName="d" 
-            dur="14s" 
+            dur="12s" 
             repeatCount="indefinite"
             values="
               M0,160 Q360,80 720,160 T1440,160 L1440,320 L0,320 Z;
@@ -46,7 +46,7 @@ const TitleTextVisuel = ({data}: TitleTextVisuelInterface) => {
         <path fill="rgba(232, 227, 214, 1)" fillOpacity="0.7">
           <animate 
             attributeName="d" 
-            dur="11s" 
+            dur="9s" 
             repeatCount="indefinite"
             values="
               M0,192 Q360,112 720,192 T1440,192 L1440,320 L0,320 Z;
@@ -59,7 +59,7 @@ const TitleTextVisuel = ({data}: TitleTextVisuelInterface) => {
         <path fill="rgba(232, 227, 214, 1)" fillOpacity="1">
           <animate 
             attributeName="d" 
-            dur="8s" 
+            dur="6s" 
             repeatCount="indefinite"
             values="
               M0,280 Q360,240 720,280 T1440,280 L1440,320 L0,320 Z;

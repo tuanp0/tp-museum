@@ -1,0 +1,47 @@
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import useMasonry from "@/components/Masonry/useMasonry"
+import Container from '@/components/Container'
+
+import styles from './Masonry.module.scss'
+
+interface GalleryImage {
+    src: string,
+    alt?: string,
+    width?: number,
+    height?: number,
+    author?: string
+}
+
+interface GalleryProps {
+    images: GalleryImage[]
+}
+
+const Gallery = ({images}: GalleryProps) => {
+  const masonryContainer = useMasonry();
+
+  return (
+    <Container>
+      <div
+        ref={masonryContainer}
+        className={styles.masonry}
+      >          
+        {images.map((image, index) => (
+          <div key={index} className={styles.masonryItem}>
+            <Image
+              src={image.src}
+              width={image.width ?? 800}
+              height={image.height ?? 600}
+              alt={image.alt ?? `Image ${index + 1}`}
+              priority={true}
+              className={styles.masonryItemImg}
+            />
+          </div>
+        ))}
+      </div>
+    </Container>
+  )
+}
+
+export default Gallery

@@ -3,7 +3,7 @@
 
 .musee {
     position: relative;
-    background: var(--sand);
+    background: var(--white);
     padding-bottom: 5rem;
 
     &Waves {
@@ -15,7 +15,7 @@
         transform: translateY(-100%);
         
         path {
-            fill: var(--sand);
+            fill: var(--white);
         }
     }
 

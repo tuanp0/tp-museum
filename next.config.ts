@@ -1,7 +1,23 @@
-import type { NextConfig } from "next"
+import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-}
+const nextConfig = (phase: string): NextConfig => {
+  const PHASE_DEVELOPMENT_SERVER = "phase-development-server";
+  
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return {
+      // Development config
+    };
+  }
 
-export default nextConfig
+  // Production config
+  return {
+    output: 'export',
+    basePath: "",
+    assetPrefix: "",
+    images: {
+      unoptimized: true,
+    },
+  };
+};
+
+export default nextConfig;

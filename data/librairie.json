@@ -7,17 +7,77 @@
     "height": 971,
     "author": "Cameron Mourot / Unsplash"
   },
-  "slider": [
+  "images": [
     {
-      "src": "./art/diwei-zhu-NAOlAo6ufxA-unsplash.jpg",
-      "alt": "Installation suspendue",
-      "width":  "640",
-      "height": "480",
-      "author": "Diwei Zhu / Unsplash",
-      "title": "Perspective suspendue",
-      "category": "Installation mobile",
-      "date": "Permanente",
-      "link": ""
+      "src": "/library/trnava-university-BEEyeib-am8-unsplash.jpg",
+      "alt": "Etagère de livres",
+      "width":  640,
+      "height": 426,
+      "author": "Trnava University Unsplash"
+    },
+    {
+      "src": "/library/janko-ferlic-sfL_QOnmy00-unsplash.jpg",
+      "alt": "Lumières et livres",
+      "width":  640,
+      "height": 591,
+      "author": "🇸🇮 Janko Ferlič / Unsplash"
+    },
+    {
+      "src": "/library/arif-riyanto-UD9nADGj2mc-unsplash.jpg",
+      "alt": "Vue aérienne sur un visiteur",
+      "width":  640,
+      "height": 960,
+      "author": "Arif Riyanto / Unsplash"
+    },
+    {
+      "src": "/library/vladyslav-tobolenko-83w6UEaYeLo-unsplash.jpg",
+      "alt": "Page de roman",
+      "width":  640,
+      "height": 960,
+      "author": "Vladyslav Tobolenko / Unsplash"
+    },
+    {
+      "src": "/library/nik-radzi-nicTBTIy-Gs-unsplash.jpg",
+      "alt": "Visiteur assis en face d'un bureau",
+      "width":  640,
+      "height": 426,
+      "author": "nik radzi / Unsplash"
+    },
+    {
+      "src": "/library/olegs-jonins-WjZQ0ksfpXY-unsplash.jpg",
+      "alt": "Vue sur la ville",
+      "width":  640,
+      "height": 424,
+      "author": "Olegs Jonins / Unsplash"
+    },
+    
+    {
+      "src": "/library/pure-julia-RAsyxC4jSwk-unsplash.jpg",
+      "alt": "Macro photographie carte",
+      "width":  640,
+      "height": 426,
+      "author": "pure julia / Unsplash"
+    },
+    {
+      "src": "/library/chelaxy-designs-n38Q6ON-Sv0-unsplash.jpg",
+      "alt": "Entrée Librarie",
+      "width":  640,
+      "height": 426,
+      "author": "Chelaxy Designs / Unsplash"
+    },
+    {
+      "src": "/library/kieran-sheehan-TorHqzyJobc-unsplash.jpg",
+      "alt": "Escalier en colimaçon",
+      "width":  640,
+      "height": 1036,
+      "author": "Kieran Sheehan / Unsplash"
+    },
+    {
+      "src": "/library/fang-wei-lin-K0ubXXQqR-E-unsplash.jpg",
+      "alt": "Livre au soleil",
+      "width":  640,
+      "height": 480,
+      "author": "Fang-Wei Lin  / Unsplash"
     }
   ]
 }
