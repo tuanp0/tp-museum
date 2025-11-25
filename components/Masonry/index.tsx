@@ -22,25 +22,26 @@ const Gallery = ({images}: GalleryProps) => {
   const masonryContainer = useMasonry();
 
   return (
-    <Container>
-      <div
-        ref={masonryContainer}
-        className={styles.masonry}
-      >          
-        {images.map((image, index) => (
-          <div key={index} className={styles.masonryItem}>
-            <Image
-              src={image.src}
-              width={image.width ?? 800}
-              height={image.height ?? 600}
-              alt={image.alt ?? `Image ${index + 1}`}
-              priority={true}
-              className={styles.masonryItemImg}
-            />
-          </div>
-        ))}
-      </div>
-    </Container>
+    <div
+      className={styles.masonry}
+    >       
+      <Container className={styles.container}>
+        <div ref={masonryContainer} className={styles.masonryContent}>
+          {images.map((image, index) => (
+            <div key={index} className={styles.masonryItem}>
+              <Image
+                src={image.src}
+                width={image.width ?? 800}
+                height={image.height ?? 600}
+                alt={image.alt ?? `Image ${index + 1}`}
+                priority={true}
+                className={styles.masonryItemImg}
+              />
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
   )
 }
 

@@ -1,16 +1,23 @@
 .masonry {
-    display: grid;
-    align-items: start;
-    gap: 1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    @media (min-width: 640px) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .container {
+        padding-top: 1rem;
+        padding-bottom: 0;
     }
 
-    @media (min-width: 768px) {
-        gap: 2rem;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    &Content {
+        display: grid;
+        align-items: start;
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @media (min-width: 768px) {
+            gap: 2rem;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
     }
 
     &Item {

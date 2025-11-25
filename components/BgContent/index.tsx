@@ -29,10 +29,11 @@ interface BgContentInterface {
   },
   waves?: boolean
   bg?: string,
+  padding?: boolean,
   children?: ReactNode,
 }
 
-const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
+const BgContent = ({data, bg, waves, padding, children}:BgContentInterface) => {
   return (
     <section className={`
       ${styles.bgcontent}
@@ -40,6 +41,7 @@ const BgContent = ({data, bg, waves, children}:BgContentInterface) => {
       ${bg === 'brown' && styles.brown}
       ${bg === 'green' && styles.green}
       ${bg === 'paper' && styles.paper}
+      ${padding && styles.padding}
     `}>
       {waves && 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" className={styles.bgcontentWaves}>
