@@ -1,0 +1,131 @@
+@use '../../styles/fonts.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.event {
+    padding-bottom: 5rem;
+    
+    .container {
+
+    }
+
+    &Title {
+        @include wysiwyg();
+    }
+
+    &Content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @media screen and (min-width:768px) {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    &Date {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border: 2px solid var(--black);
+        border-bottom: 1px solid var(--black);
+        border-radius: 16px;
+        padding: 1.5rem;
+        background-color: var(--lightred);
+        background-image: url('/paper.png');
+        background-repeat: repeat;
+        background-size: 200px;
+        box-shadow: 0 0 10px -3px var(--black20);
+
+        @media screen and (min-width:768px) {
+            width: 200px;
+            border-bottom: 2px solid var(--black);
+            border-right: 1px solid var(--black);
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: calc(100% - 24px);
+            height: 0;
+            left: 12px;
+            top: 100%;
+            border: 1px dashed var(--white);
+
+            @media screen and (min-width:768px) {
+                width: 0;
+                height: calc(100% - 24px);
+                left: auto;
+                right: -2px;
+                top: 12px;
+            }
+        }
+
+        &Start,
+        &End {
+            @include qsand(700);
+            font-size: 1.5rem;
+            color: white;
+            text-align: center;
+            transform-origin: center;
+        }
+
+        &End {
+            border-bottom: 3px solid var(--white);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &Place {
+        @include qsand(700);
+        font-size: 1.125rem;
+        color: white;
+        text-align: center;
+    }
+
+    &Text {
+        @include wysiwyg();
+        width: 100%;
+        border: 2px solid var(--black);
+        border-top: 1px solid var(--black);
+        border-radius: 16px;
+        padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+        background-color: var(--whtie);
+        background-image: url('/paper.png');
+        background-repeat: repeat;
+        background-size: 200px;
+        box-shadow: 0 0 10px -3px var(--black20);
+
+        @media screen and (min-width:768px) {
+            width: calc(100% - 200px);
+            border-top: 2px solid var(--black);
+            border-left: 1px solid var(--black);
+        }
+    }
+
+    &Name {
+        @include museo(700);
+        font-size: 1.75rem;
+    }
+
+    &Link {
+        @include qsand(700);
+        color: var(--white);
+        padding: .5rem 1.25rem;
+        margin-top: 0.75rem;
+        display: inline-block;
+        border: 2px solid var(--darkblue);
+        background: var(--darkblue);
+        border-radius: 0 0 12px 0;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: var(--darkblue);
+            background: var(--white);
+        }
+    }
+}

@@ -5,6 +5,7 @@ import CafeData from '@/data/cafe.json'
 
 import Intro from '@/components/Intro'
 import TitleTextVisuel from '@/components/TitleTextVisuel'
+import Event from '@/components/Event'
 import BgContent from '@/components/BgContent'
 import SliderCards from '@/components/SliderCards'
 import Masonry from '@/components/Masonry'
@@ -17,6 +18,7 @@ export default function Home() {
     <main className={styles.main}>
       <Intro />
       <TitleTextVisuel data={histoireData} />
+      <Event />
       <BgContent data={MuseeData} bg={'blue'} waves>
         <SliderCards slider={MuseeData.slider}/>
       </BgContent>
