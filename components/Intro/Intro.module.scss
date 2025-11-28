@@ -16,8 +16,9 @@
         color: var(--darkblue);
         letter-spacing: 3px;
         display: block;
-        margin: 10rem auto 1rem auto;
+        margin: 9rem auto 1rem auto;
         text-align: center;
+        max-width: 100%;
 
         text {
             fill: var(--darkblue);
@@ -25,7 +26,7 @@
 
         @media screen and (min-width:768px) {
             font-size: 4rem;
-            margin: 7rem auto .75rem auto;
+            margin: 5rem auto 2.25rem auto;
         }
     }
 

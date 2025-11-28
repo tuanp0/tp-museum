@@ -15,9 +15,9 @@ const Intro = () => {
     <section className={styles.intro}>
         <Container className={styles.container}>
           {/* <h2 className={styles.introTitle}>{data.title}</h2> */}
-          <svg className={styles.introTitle} width="560" height="120" viewBox="0 0 560 120">
+          <svg className={styles.introTitle} width="450" height="120" viewBox="0 0 450 120">
             <defs>
-              <path id="textPath" d="M10 130 C190 60 370 60 550 130"/>
+              <path id="textPath" d="M10 130 C150 60 300 60 450 130"/>
             </defs>
             <text fill="black">
               <textPath href="#textPath" startOffset="50%" textAnchor="middle">{data.title}</textPath>

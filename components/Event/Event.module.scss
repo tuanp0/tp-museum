@@ -2,7 +2,7 @@
 @use '../../styles/mixins.scss' as *;
 
 .event {
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
     
     .container {
 
@@ -16,10 +16,19 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         @media screen and (min-width:768px) {
-            width: 70%;
-            margin: 0 auto;
+            width: 80%;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        @media screen and (min-width:992px) {
+            width: 60%;
         }
     }
 
@@ -29,11 +38,11 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 100%;
+        width: 180px;
         border: 2px solid var(--black);
-        border-bottom: 1px solid var(--black);
+        border-right: 1px solid var(--black);
         border-radius: 16px;
-        padding: 1.5rem;
+        padding: 1.25rem;
         background-color: var(--lightred);
         background-image: url('/paper.png');
         background-repeat: repeat;
@@ -42,35 +51,31 @@
 
         @media screen and (min-width:768px) {
             width: 200px;
-            border-bottom: 2px solid var(--black);
-            border-right: 1px solid var(--black);
+            padding: 1.5rem;
         }
 
         &::before {
             position: absolute;
             content: '';
-            width: calc(100% - 24px);
-            height: 0;
-            left: 12px;
-            top: 100%;
+            width: 0;
+            height: calc(100% - 24px);
+            left: auto;
+            right: -2px;
+            top: 12px;
             border: 1px dashed var(--white);
-
-            @media screen and (min-width:768px) {
-                width: 0;
-                height: calc(100% - 24px);
-                left: auto;
-                right: -2px;
-                top: 12px;
-            }
         }
 
         &Start,
         &End {
             @include qsand(700);
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             color: white;
             text-align: center;
             transform-origin: center;
+
+            @media screen and (min-width:768px) {
+                font-size: 1.5rem;
+            }
         }
 
         &End {
@@ -82,18 +87,22 @@
 
     &Place {
         @include qsand(700);
-        font-size: 1.125rem;
+        font-size: 1rem;
         color: white;
         text-align: center;
+
+        @media screen and (min-width:768px) {
+            font-size: 1.125rem;
+        }
     }
 
     &Text {
         @include wysiwyg();
-        width: 100%;
+        width: calc(100% - 180px);
         border: 2px solid var(--black);
-        border-top: 1px solid var(--black);
+        border-left: 1px solid var(--black);
         border-radius: 16px;
-        padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+        padding: 1.25rem 1.25rem 1.25rem 2.25rem;
         background-color: var(--whtie);
         background-image: url('/paper.png');
         background-repeat: repeat;
@@ -102,14 +111,25 @@
 
         @media screen and (min-width:768px) {
             width: calc(100% - 200px);
-            border-top: 2px solid var(--black);
-            border-left: 1px solid var(--black);
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
         }
     }
 
     &Name {
         @include museo(700);
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+
+        @media screen and (min-width:768px) {
+            font-size: 1.75rem;
+        }
+    }
+
+    &Desc {
+        font-size: 1rem;
+        
+        @media screen and (min-width:768px) {
+            font-size: 1.5rem;
+        }
     }
 
     &Link {

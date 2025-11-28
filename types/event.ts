@@ -1,5 +1,8 @@
-export interface EventInterface {
+export interface EventBlockInterface {
     title: string;
+    events: EventsInterface[]
+}
+export interface EventsInterface {
     dateStart: string;
     dateEnd: string;
     place: string;
