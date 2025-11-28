@@ -30,10 +30,11 @@ interface BgContentInterface {
   waves?: boolean
   bg?: string,
   padding?: boolean,
+  noContainer?: boolean,
   children?: ReactNode,
 }
 
-const BgContent = ({data, bg, waves, padding, children}:BgContentInterface) => {
+const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentInterface) => {
   return (
     <section className={`
       ${styles.bgcontent}
@@ -93,10 +94,19 @@ const BgContent = ({data, bg, waves, padding, children}:BgContentInterface) => {
         </svg>
       }
 
-      <Container className={styles.container}>
-        <div className={styles.bgcontentTitle} dangerouslySetInnerHTML={{__html:data.title}} />
-        {children}
-      </Container>
+      {noContainer ? (
+        <>
+          <Container className={`${styles.container} ${styles.onlyTitle}`}>
+            <div className={styles.bgcontentTitle} dangerouslySetInnerHTML={{__html:data.title}} />
+          </Container>
+          {children}
+        </>
+      ) : (
+        <Container className={styles.container}>
+          <div className={styles.bgcontentTitle} dangerouslySetInnerHTML={{__html:data.title}} />
+          {children}
+        </Container>
+      )}
     </section>
   )
 }

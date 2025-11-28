@@ -7,15 +7,15 @@
       "place": "<p>Salle Tech<br/>1er étage</p>",
       "eventName": "Etoiles et galaxies",
       "eventDesc": "Installation temporaire avec lumières et salles immersives",
-      "link": "/test"
+      "link": "/exposition/etoiles-et-galaxies"
     },
     {
-      "dateStart": "1.12.2025",
-      "dateEnd": "30.06.2026",
-      "place": "<p>Salle Tech<br/>1er étage</p>",
-      "eventName": "Etoiles et galaxies",
-      "eventDesc": "Installation temporaire avec lumières et salles immersives",
-      "link": ""
+      "dateStart": "1.10.2026",
+      "dateEnd": "15.08.2026",
+      "place": "<p>Salle Modulable<br/>2ème étage</p>",
+      "eventName": "Canyon et érosion",
+      "eventDesc": "Installation temporaire avec un chemin prenant diverses formes",
+      "link": "/exposition/canyon-et-erosion"
     }
   ]
 }

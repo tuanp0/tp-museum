@@ -22,6 +22,22 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Caveat';
+    src: url('./fonts/Caveat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Edu';
+    src: url('./fonts/EduNSWACTCursive-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 @mixin qsand($weight:400) {
     font-family: 'Quicksand', Arial, sans-serif;
     font-weight: $weight;
@@ -29,5 +45,15 @@
 
 @mixin museo($weight:400) {
     font-family: 'MuseoModerno', Arial, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin caveat($weight:400) {
+    font-family: 'Caveat', Arial, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin edu($weight:400) {
+    font-family: 'Edu', Arial, sans-serif;
     font-weight: $weight;
 }

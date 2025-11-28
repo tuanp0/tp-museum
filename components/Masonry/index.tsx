@@ -37,6 +37,7 @@ const Gallery = ({images}: GalleryProps) => {
                 priority={true}
                 className={styles.masonryItemImg}
               />
+              <span className={`author`}>{image.author}</span>
             </div>
           ))}
         </div>

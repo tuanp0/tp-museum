@@ -15,11 +15,11 @@
     }
 
     &.brown {
-        background: var(--darkbrown);
+        background: var(--brown);
 
         .bgcontentWaves {
             path {
-                fill: var(--darkbrown);
+                fill: var(--brown);
             }
         }
     }
@@ -35,10 +35,21 @@
     }
 
     &.paper {
-        background: var(--paper);
-        background-image: url('/paper.png');
-        background-repeat: repeat;
-        background-size: 256px;
+        position: relative;
+        z-index: 0;
+        background: var(--white);
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: url('/paper.png');
+            background-repeat: repeat;
+            background-size: 256px;
+            z-index: -1;
+            opacity: 0.7;
+        }
     }
 
     &Waves {
@@ -48,7 +59,6 @@
         top: 1px;
         left: 0;
         transform: translateY(-100%);
-        z-index: -1;
         pointer-events: none;
     }
 
@@ -62,6 +72,10 @@
 
     .container {
         padding: 3rem var(--padding) 5rem;
+
+        &.onlyTitle {
+            padding-bottom: 0;
+        }
     }
 
     &Title {

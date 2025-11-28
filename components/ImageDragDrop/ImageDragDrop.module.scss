@@ -1,55 +1,106 @@
+@use '../../styles/fonts.scss' as *;
+
 .imagedragdrop {
+    padding-bottom: 3rem;
+
     .container {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0;
+        max-width: 100%;
+        width: calc(100vw - 3rem);
     }
 
     &Content {
         position: relative;
         width: 100%;
-        min-height: 100vh;
-        overflow: hidden;
-        border: 4px solid var(--white);
-        background: var(--white80);
-        border-radius: 6px;
+        min-height: 90vh;
+        // overflow-x: auto;
+        // overflow-y: hidden;
+        box-shadow: 0 0 25px 2px rgba(0,0,0,0.5) inset;
+        border-radius: 12px;
+        background: var(--darkbrown);
+
+        @media screen and (min-width: 992px) {
+            overflow: hidden;
+        }
     }
 
     &Solo {
         position: absolute;
         cursor: move;
         transition: box-shadow 0.2s ease;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
         z-index: 10;
+        background: var(--white);
+        padding: 1rem 1rem 0 1rem;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('/paper.png');
+            background-repeat: repeat;
+            background-size: 256px;
+            z-index: -1;
+            opacity: 0.6;
+        }
 
         &:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
         }
 
         &.dragging {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
             z-index: 50;
         }
     }
 
+    &Visuel {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            box-shadow: 0 0 24px 0px rgba(0,0,0,.5) inset;
+        }
+    }
+
     &Img {
-        width: 300px;
+        width: 250px;
         height: auto;
         display: block;
-        border-radius: 0.5rem;
-        border: 4px solid white;
+        border-radius: 2px;
         user-select: none;
         pointer-events: none;
         display: block;
     }
 
     &Text {
-        position: absolute;
-        top: 0.5rem;
-        left: 0.5rem;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
-        font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
+        // position: absolute;
+        // top: 0.5rem;
+        // left: 0.5rem;
+        // background: rgba(0, 0, 0, 0.5);
+        
+        color: var(--black);
+        
+        text-align: center;
+        padding: 1rem 0;
         border-radius: 0.25rem;
+
+        &.fontOne {
+            @include caveat();
+            font-size: 1.5rem;
+        }
+
+        &.fontTwo {
+            @include edu();
+            font-size: 1.25rem;
+        }
     }
 }

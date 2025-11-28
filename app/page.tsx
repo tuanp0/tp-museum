@@ -25,7 +25,7 @@ export default function Home() {
       <BgContent data={LibrairieData} bg={`paper`} padding>
         <Masonry images={LibrairieData.images} />
       </BgContent>
-      <BgContent data={CafeData} bg={'brown'} waves>
+      <BgContent data={CafeData} bg={'brown'} waves noContainer>
         {/* <SliderCards slider={CafeData.slider}/> */}
         <ImageDragDrop />
       </BgContent>
