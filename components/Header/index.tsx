@@ -38,7 +38,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`${styles.header} ${isScrolled && styles.scrolled}`}>
+    <header className={`${styles.header} ${isScrolled && styles.scrolled} ${isMenuOpened && styles.opened}`}>
         <Container className={styles.container} noPadding>
           <Link href={`/`}>
             {isHome ? (
@@ -53,7 +53,7 @@ const Header = () => {
               </p>
             )}
           </Link>
-          <button className={`${styles.headerBurger} ${isMenuOpened && styles.opened}`} onClick={() => {toggleMenuMobile()}}>
+          <button className={`${styles.headerBurger}`} onClick={() => {toggleMenuMobile()}}>
               <span className={styles.headerBurgerIcon1}></span>
               <span className={styles.headerBurgerIcon2}></span>
               <span className={styles.headerBurgerIcon3}></span>
