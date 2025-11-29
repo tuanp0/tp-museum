@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.main.padding {
+  padding-top: 7rem;
+}
+
 .author {
   @include qsand();
   font-size: .625rem;

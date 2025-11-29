@@ -7,16 +7,20 @@
     min-height: 100dvh;
 
     .container {
-        padding-bottom: 4rem;
+        padding-bottom: 12rem;
+
+        @media screen and (min-width: 992px) {
+            padding-bottom: 9rem;
+        }
     }
 
     &Title {
         @include museo(500);
-        font-size: 2.25rem;
+        font-size: 4rem;
         color: var(--darkblue);
         letter-spacing: 3px;
         display: block;
-        margin: 9rem auto 1rem auto;
+        margin: 9rem auto 0 auto;
         text-align: center;
         max-width: 100%;
 
@@ -79,10 +83,15 @@
     &News {
         position: sticky;
         height: 0;
-        top: 140px;
+        top: 250px;
         padding: 0 var(--padding);
         max-width: var(--max-width);
         text-align: center;
+        transform: translateY(-100px);
+
+        // @media screen and (min-width: 992px) {
+        //     top: 250px;
+        // }
 
         &Content {
             border-radius: 14px;

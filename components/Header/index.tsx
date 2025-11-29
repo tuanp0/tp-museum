@@ -1,5 +1,6 @@
 'use client'
 import React, {useState, useEffect} from 'react'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/Container'
@@ -7,6 +8,9 @@ import Container from '@/components/Container'
 import styles from './Header.module.scss'
 
 const Header = () => {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpened, setIsMenuOpened] = useState(false)
 
@@ -36,10 +40,19 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${isScrolled && styles.scrolled}`}>
         <Container className={styles.container} noPadding>
-          <h1 className={styles.headerTitle}>
-            <Image src={`./tp-museum.svg`} alt={`TP Museum | Musée - Librairie - Café`} width={280} height={78} className={styles.headerLogo} />
-            <span className={styles.headerSpan}>Tp Museum</span>
-          </h1>
+          <Link href={`/`}>
+            {isHome ? (
+              <h1 className={styles.headerTitle}>
+                <Image src={`./tp-museum.svg`} alt={`TP Museum | Musée - Librairie - Café`} width={280} height={78} className={styles.headerLogo} />
+                <span className={styles.headerSpan}>Tp Museum</span>
+              </h1>
+            ) : (
+              <p className={styles.headerTitle}>
+                <Image src={`./tp-museum.svg`} alt={`TP Museum | Musée - Librairie - Café`} width={280} height={78} className={styles.headerLogo} />
+                <span className={styles.headerSpan}>Tp Museum</span>
+              </p>
+            )}
+          </Link>
           <button className={`${styles.headerBurger} ${isMenuOpened && styles.opened}`} onClick={() => {toggleMenuMobile()}}>
               <span className={styles.headerBurgerIcon1}></span>
               <span className={styles.headerBurgerIcon2}></span>
@@ -63,7 +76,7 @@ const Header = () => {
               </div>
               <nav className={styles.headerMenu}>
                 <ul className={styles.headerMenuUl}>
-                  <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le Musée</Link></li>
+                  <li className={styles.headerMenuLi}><Link href={`musee`} title={``} className={styles.headerMenuLink}>Le Musée</Link></li>
                   <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>La Librarie</Link></li>
                   <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Le Café</Link></li>
                   <li className={styles.headerMenuLi}><Link href={`#`} title={``} className={styles.headerMenuLink}>Accès</Link></li>
