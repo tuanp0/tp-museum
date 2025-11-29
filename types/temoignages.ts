@@ -7,6 +7,10 @@ export interface TemoignageItemInterface {
   x: number;
   y: number;
   url: string;
+  alt: string;
+  width: number;
+  height:number;
+  author: string;
   zIndex: number;
   rotation: number;
   message: string;

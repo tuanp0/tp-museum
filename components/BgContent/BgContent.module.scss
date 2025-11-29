@@ -2,7 +2,13 @@
 
 .bgcontent {
     position: relative;
-    background: var(--sky);
+    background: var(--white);
+
+    .bgcontentWaves {
+        path {
+            fill: var(--white);
+        }
+    }
 
     &.blue {
         background: var(--bluesea);
@@ -51,6 +57,10 @@
             opacity: 0.7;
         }
     }
+
+    // &.padding {
+    //     padding-bottom: var(--padding);
+    // }
 
     &Waves {
         position: absolute;

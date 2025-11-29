@@ -1,14 +1,14 @@
 {
   "temoignages": [
-    { "id": 1, "x": 50, "y": 30, "url": "https://picsum.photos/seed/1/200/200", "zIndex": 1, "rotation": 0, "message": "Incredible", "font": 1},
-    { "id": 2, "x": 300, "y": 30, "url": "https://picsum.photos/seed/2/200/200", "zIndex": 2, "rotation": 0, "message": "Incredible", "font": 2 },
-    { "id": 3, "x": 550, "y": 30, "url": "https://picsum.photos/seed/3/200/200", "zIndex": 3, "rotation": 0, "message": "Incredible", "font": 1 },
-    { "id": 4, "x": 50, "y": 180, "url": "https://picsum.photos/seed/4/200/200", "zIndex": 4, "rotation": 0, "message": "Incredible", "font": 2 },
-    { "id": 5, "x": 300, "y": 180, "url": "https://picsum.photos/seed/5/200/200", "zIndex": 5, "rotation": 0, "message": "Incredible", "font": 1 },
-    { "id": 6, "x": 550, "y": 180, "url": "https://picsum.photos/seed/6/200/200", "zIndex": 6, "rotation": 0, "message": "Incredible", "font": 2 },
-    { "id": 7, "x": 50, "y": 330, "url": "https://picsum.photos/seed/7/200/200", "zIndex": 7, "rotation": 0, "message": "Incredible", "font": 1 },
-    { "id": 8, "x": 300, "y": 330, "url": "https://picsum.photos/seed/8/200/200", "zIndex": 8, "rotation": 0, "message": "Incredible", "font": 2 },
-    { "id": 9, "x": 550, "y": 330, "url": "https://picsum.photos/seed/9/200/200", "zIndex": 9, "rotation": 0, "message": "Incredible", "font": 1 },
-    { "id": 10, "x": 300, "y": 480, "url": "https://picsum.photos/seed/10/200/200", "zIndex": 10, "rotation": 0, "message": "Incredible", "font": 2 }
+    { "id": 1, "x": 50, "y": 30, "url": "https://picsum.photos/seed/1/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 1, "rotation": 0, "message": "Incredible", "font": 1},
+    { "id": 2, "x": 300, "y": 30, "url": "https://picsum.photos/seed/2/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 2, "rotation": 0, "message": "Incredible", "font": 2 },
+    { "id": 3, "x": 550, "y": 30, "url": "https://picsum.photos/seed/3/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 3, "rotation": 0, "message": "Incredible", "font": 1 },
+    { "id": 4, "x": 50, "y": 180, "url": "https://picsum.photos/seed/4/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 4, "rotation": 0, "message": "Incredible", "font": 2 },
+    { "id": 5, "x": 300, "y": 180, "url": "https://picsum.photos/seed/5/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 5, "rotation": 0, "message": "Incredible", "font": 1 },
+    { "id": 6, "x": 550, "y": 180, "url": "https://picsum.photos/seed/6/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 6, "rotation": 0, "message": "Incredible", "font": 2 },
+    { "id": 7, "x": 50, "y": 330, "url": "https://picsum.photos/seed/7/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 7, "rotation": 0, "message": "Incredible", "font": 1 },
+    { "id": 8, "x": 300, "y": 330, "url": "https://picsum.photos/seed/8/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 8, "rotation": 0, "message": "Incredible", "font": 2 },
+    { "id": 9, "x": 550, "y": 330, "url": "https://picsum.photos/seed/9/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 9, "rotation": 0, "message": "Incredible", "font": 1 },
+    { "id": 10, "x": 300, "y": 480, "url": "https://picsum.photos/seed/10/200/200", "alt": "Image", "width": 200, "height": 200, "author": "Test", "zIndex": 10, "rotation": 0, "message": "Incredible", "font": 2 }
   ]
 }

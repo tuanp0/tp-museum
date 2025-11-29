@@ -124,7 +124,9 @@
         top: 100%;
         right: 0;
         padding: 0 var(--padding);
-        background: var(--sky);
+        background: var(--sky60);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
         opacity: 0;
         box-shadow: 0 10px 16px -8px var(--black);
         border-radius: 0 0 8px 8px;
@@ -133,6 +135,7 @@
             height 0.3s ease-in-out,
             padding 0.3s ease-in-out,
             opacity 0.3s ease-in-out;
+        
 
         @media screen and (min-width: 992px) {
             position: relative;
@@ -140,7 +143,9 @@
             height: auto !important;
             top: auto;
             right: auto;
-            background: transparent;;
+            background: transparent;
+            -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
             opacity: 1;
             padding: 0 !important;
             box-shadow: none;
@@ -227,7 +232,7 @@
         }
 
         &Link {
-            @include qsand(700);
+            @include qsand();
             font-size: 1.25rem;
             color: var(--darkblue);
             padding: .625rem;

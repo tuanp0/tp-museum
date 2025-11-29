@@ -1,30 +1,14 @@
 @use '../../styles/fonts.scss' as *;
 
-.imagedragdrop {
-    padding-bottom: 3rem;
+.slidergallery {
+    padding-bottom: 1.5rem;
 
-    .container {
-        padding: 0;
-        max-width: 100%;
-        width: calc(100vw - 3rem);
+    &Slider {
+        overflow: initial;
     }
 
-    &Content {
-        position: relative;
-        width: 100%;
-        min-height: 90vh;
-        overflow: hidden;
-        box-shadow: 0 0 25px 2px rgba(0,0,0,0.5) inset;
-        border-radius: 12px;
-        background: var(--darkbrown);
-    }
-
-    &Solo {
-        position: absolute;
-        cursor: move;
-        transition: box-shadow 0.2s ease;
+    &Slide {
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
-        z-index: 10;
         background: var(--white);
         padding: 1rem 1rem 0 1rem;
 
@@ -46,14 +30,15 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
         }
 
-        &.dragging {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
-            z-index: 50;
-        }
+        // &.dragging {
+        //     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
+        //     z-index: 50;
+        // }
     }
 
     &Visuel {
         position: relative;
+
         &::before {
             position: absolute;
             content: '';
@@ -67,7 +52,7 @@
     }
 
     &Img {
-        width: 250px;
+        width: 100%;
         height: auto;
         display: block;
         border-radius: 2px;
@@ -77,13 +62,8 @@
     }
 
     &Text {
-        // position: absolute;
-        // top: 0.5rem;
-        // left: 0.5rem;
-        // background: rgba(0, 0, 0, 0.5);
-        
         color: var(--black);
-        
+        height: 68px;
         text-align: center;
         padding: 1rem 0;
         border-radius: 0.25rem;
