@@ -1,7 +1,11 @@
 .bgimage {
     position: relative;
-    height: 600px;
+    height: 400px;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
 
     &Img {
         position: absolute;
@@ -13,5 +17,9 @@
         background-position: center;
         background-attachment: fixed;
         box-shadow: 0 0 30px 0 inset var(--black20);
+
+        @supports (-webkit-touch-callout: none) {
+            background-attachment: scroll;
+        }
     }
 }
