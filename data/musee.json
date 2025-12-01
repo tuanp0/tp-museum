@@ -1,12 +1,14 @@
 {
   "title": "<h2>Le Musee</h2>",
-  "image": {
-    "src": "/arts.png",
-    "alt": "Arts",
-    "width": 1500,
-    "height": 971,
-    "author": "Cameron Mourot / Unsplash"
-  },
+  "images": [
+    {
+      "src": "/museum/arts.png",
+      "alt": "Arts",
+      "width": 1500,
+      "height": 971,
+      "author": "Cameron Mourot / Unsplash"
+    }
+  ],
   "slider": [
     {
       "src": "./art/diwei-zhu-NAOlAo6ufxA-unsplash.jpg",

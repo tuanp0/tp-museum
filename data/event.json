@@ -1,5 +1,14 @@
 {
   "title": "<h2>Evénements en cours</h2>",
+  "images": [
+    {
+      "src": "/museum/entrance.png",
+      "alt": "Entrance",
+      "width": 1500,
+      "height": 1000,
+      "author": "Cameron Mourot / Unsplash"
+    }
+  ],
   "events": [
     {
       "dateStart": "1.12.2025",

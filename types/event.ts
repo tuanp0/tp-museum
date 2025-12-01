@@ -1,5 +1,6 @@
 export interface EventsInterface {
     title: string;
+    images: EventImageInterface[];
     events: EventItemInterface[];
 }
 export interface EventItemInterface {
@@ -9,4 +10,12 @@ export interface EventItemInterface {
     eventName: string;
     eventDesc: string;
     link: string;
+}
+
+export interface EventImageInterface {
+    src: string;
+    alt: string;
+    width: number,
+    height: number,
+    author: string;
 }

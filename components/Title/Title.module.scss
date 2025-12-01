@@ -1,0 +1,20 @@
+@use '../../styles/mixins.scss' as *;
+
+.container {
+    padding: 3rem var(--padding) 0 var(--padding);
+}
+
+.title {
+    @include wysiwyg();
+
+    &.white {
+        h2 {
+            color: var(--white);
+
+            &::before,
+            &::after {
+                background: var(--white);
+            }
+        }
+    }
+}

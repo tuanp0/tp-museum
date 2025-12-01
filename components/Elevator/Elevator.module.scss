@@ -1,0 +1,41 @@
+@use '../../styles/fonts.scss' as *;
+
+.elevator {
+    .container {
+        position: relative;
+        padding: 0 var(--padding);
+    }
+
+    &Inner {
+        position: absolute;
+        top: 0;
+        right: var(--padding);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &Text {
+        .white & {
+            color: var(--white);
+        }
+
+        p {
+            @include museo(500);
+            font-size: .875rem;
+            line-height: 1.125;
+            text-align: center;
+        }
+    }
+
+    &Svg {
+        width: 54px;
+        height: auto;
+        display: block;
+
+        .white & {
+            path {
+                fill: var(--white);
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import Image from 'next/image'
 import Container from '@/components/Container'
-import SliderCards from '@/components/SliderCards'
+import Title from '@/components/Title'
 
 import styles from "./BgContent.module.scss"
 
@@ -78,16 +78,12 @@ const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentIn
 
       {noContainer ? (
         <>
-          <Container className={`${styles.container} ${styles.onlyTitle}`}>
-            <div className={styles.bgcontentTitle} dangerouslySetInnerHTML={{__html:data.title}} />
-          </Container>
           {children}
         </>
       ) : (
-        <Container className={styles.container}>
-          <div className={styles.bgcontentTitle} dangerouslySetInnerHTML={{__html:data.title}} />
-          {children}
-        </Container>
+        // <Container className={styles.container}>
+          <>{children}</>
+        // </Container>
       )}
     </section>
   )

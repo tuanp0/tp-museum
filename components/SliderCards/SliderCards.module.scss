@@ -1,6 +1,11 @@
 @use '../../styles/fonts.scss' as *;
 
 .slidercards {
+
+    .container {
+        padding-top: 0;
+    }
+    
     &Slider {
         width: calc(100% + (50dvw - 50%) - (var(--padding)/2));
 
