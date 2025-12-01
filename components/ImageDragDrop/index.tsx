@@ -16,7 +16,8 @@ const getRandomRotation = () => Math.floor(Math.random() * 41) - 20;
 const ImageDragDrop: React.FC = () => {
   const maxZIndexRef = useRef(10);
 
-  const data: TemoignagesInterface = temoignagesData
+  // const data: TemoignagesInterface = temoignagesData
+  const data = temoignagesData as TemoignagesInterface;
 
   const [images, setImages] = useState<TemoignageItemInterface[]>(data.temoignages);
 

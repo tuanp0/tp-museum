@@ -12,66 +12,64 @@ import 'swiper/css/scrollbar';
 import styles from './SliderGallery.module.scss'
 
 interface SlideItem {
-  id: number;
   url: string;
   alt?: string;
   author?: string;
-  title?: string;
-  category?: string;
   date?: string;
   width?: number;
   height?: number;
   message?: string;
+  font?: number;
   [key: string]: any;
 }
 
 interface SliderGalleryProps {
   data: SlideItem[];
   reverse?: boolean;
+  page?: number;
 }
 
-const SliderGalery = ({ data, reverse }:SliderGalleryProps) => {
+const SliderGalery = ({ data, reverse, page }:SliderGalleryProps) => {
+  const currentIndex = page || 1;
+  const startIndex = (currentIndex-1) * 10;
+  const endIndex = currentIndex * 10;
+  const paginatedData = data.slice(startIndex, endIndex);
 
   return (
     <div className={styles.slidergallery}>
-        {data.length >= 1 &&
+        {paginatedData.length >= 1 &&
         <>
           <Swiper
             className={`slidergallerySlider ${styles.slidergallerySlider}`}
+            modules={[Autoplay, Scrollbar, A11y]}
+            freeMode={true}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
               reverseDirection: reverse || false,
             }}
-            speed={13000}
+            speed={10000}
             loop={true}
             grabCursor={true}
-            modules={[Autoplay, Scrollbar, A11y]}
-            spaceBetween={24}
-            slidesPerView={3}
-            breakpoints={{
-              768: {
-                slidesPerView: 4
-              },
-              1024: {
-                slidesPerView: 5
-              }
-            }}
+            slidesPerView={'auto'}
           >
-            {data.map((item, index) => (
+            {paginatedData.map((item, index) => (
               <SwiperSlide key={index} className={`${styles.slidergallerySlide}`}>
-                <div className={styles.slidergalleryVisuel}>
-                  <img src={item.url} alt={item.alt} width={item.width} height={item.height} className={styles.slidergalleryImg}/>
-                  <span className={`author`}>{item.author}</span>
-                </div>
-                <div
-                  className={`
-                    ${styles.slidergalleryText}
-                    ${item.font === 1 ? styles.fontOne : ''}
-                    ${item.font === 2 ? styles.fontTwo : ''}
-                  `}
-                >
-                  {item.message}
+                <div className={styles.slidergallerySlideContent}>
+                  <div className={styles.slidergalleryVisuel}>
+                    <img src={item.url} alt={item.alt} width={item.width} height={item.height} className={styles.slidergalleryImg}/>
+                    <span className={`author`}>{item.author}</span>
+                  </div>
+                  <div
+                    className={`
+                      ${styles.slidergalleryText}
+                      ${item.font === 1 ? styles.fontOne : ''}
+                      ${item.font === 2 ? styles.fontTwo : ''}
+                      ${item.font === 3 ? styles.fontThree : ''}
+                    `}
+                  >
+                    <p className={styles.slidergalleryTextInner} dangerouslySetInnerHTML={{__html: item.message ?? ''}} />
+                  </div>
                 </div>
               </SwiperSlide>
             ))}

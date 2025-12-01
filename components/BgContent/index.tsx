@@ -8,24 +8,6 @@ import styles from "./BgContent.module.scss"
 interface BgContentInterface {
   data: {
     title: string
-    // image: {
-    //   src: string
-    //   alt: string
-    //   width: number
-    //   height: number
-    //   author: string
-    // },
-    // slider: {
-    //   src: string
-    //   alt: string
-    //   width: string
-    //   height: string
-    //   author: string
-    //   title: string
-    //   category: string
-    //   date: string
-    //   link: string
-    // }[]
   },
   waves?: boolean
   bg?: string,

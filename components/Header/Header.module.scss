@@ -15,9 +15,9 @@
 
     &.scrolled {
         padding: .5rem 0;
-        background: var(--sky60);
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
+        background: var(--white50);
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
 
         .headerRsItem {
             padding: .25rem .375rem;
@@ -36,6 +36,12 @@
                 &.opened {
                     height: calc(100dvh - 72px);
                 }
+            }
+        }
+
+        @media screen and (min-width:992px) {
+            &.opened {
+                background: var(--white50);
             }
         }
     }
@@ -150,8 +156,8 @@
             top: auto;
             right: auto;
             background: transparent;
-            -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
             opacity: 1;
             padding: 0 !important;
             box-shadow: none;
