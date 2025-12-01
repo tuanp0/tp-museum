@@ -5,9 +5,27 @@
     background: var(--sky);
     min-height: 100vh;
     min-height: 100dvh;
+    // overflow: hidden;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 62vw;
+        height: 62vw;
+        min-width: 300px;
+        min-height: 300px;
+        border-radius: 100%;
+        background: var(--yellow);
+        top: 7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
 
     .container {
+        position: relative;
         padding-bottom: 12rem;
+        z-index: 1;
 
         @media screen and (min-width: 992px) {
             padding-bottom: 9rem;
@@ -66,12 +84,14 @@
         @media screen and (min-width: 992px) {
             width: 100%;
             height: auto;
+            max-height: 55dvh;
         }
 
         &Img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
             display: block;
         }
 

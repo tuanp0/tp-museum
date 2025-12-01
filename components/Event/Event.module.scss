@@ -2,7 +2,9 @@
 @use '../../styles/mixins.scss' as *;
 
 .event {
+    position: relative;
     padding-bottom: 7rem;
+    background: var(--white);
     
     .container {
 
