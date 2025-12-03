@@ -48,7 +48,7 @@ const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentIn
             />
           </path>
           
-          <path fill="rgba(232, 227, 214, 1)" fillOpacity="0.7">
+          <path fill="rgba(232, 227, 214, 1)" fillOpacity="0.6">
             <animate 
               attributeName="d" 
               dur="8s" 
@@ -61,7 +61,7 @@ const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentIn
             />
           </path>
           
-          <path fill="rgba(232, 227, 214, 1)" fillOpacity="1">
+          <path fill="rgba(232, 227, 214, 1)" fillOpacity="0.8">
             <animate 
               attributeName="d" 
               dur="5s" 

@@ -42,3 +42,9 @@ a {
     right: 8px;
   }
 }
+
+.slidergallerySlider {
+  .swiper-wrapper {
+    transition-timing-function : linear;
+  }
+}
