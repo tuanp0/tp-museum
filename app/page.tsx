@@ -1,3 +1,4 @@
+import IntroData from '@/data/intro.json'
 import MuseeData from '@/data/musee.json'
 import EventData from '@/data/event.json'
 import LibrairieData from '@/data/librairie.json'
@@ -12,6 +13,7 @@ import Elevator from '@/components/Elevator'
 import Title from '@/components/Title'
 import SliderCards from '@/components/SliderCards'
 import BgImage from '@/components/BgImage'
+import BgVideo from '@/components/BgVideo'
 import Masonry from '@/components/Masonry'
 import SliderGallery from '@/components/SliderGallery'
 
@@ -20,7 +22,9 @@ export default function Home() {
 
   return (
     <main className={`main`}>
+      {/* <BgVideo data={IntroData.video}/> */}
       <Intro />
+      
       <Event />
       <BgImage data={EventData.images}/>
       <BgContent data={MuseeData} bg={'blue'} waves>

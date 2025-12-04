@@ -11,5 +11,10 @@
   },
   "news": {
     "openText": "Le musée est ouvert aujourd'hui de {time}"
+  },
+  "video": {
+    "url": "/phillchng.webm",
+    "title": "CHIMEI Museum 奇美博物館 / Fujifilm XT5 - Cinematic short film",
+    "author": "PhillChng / Youtube"
   }
 }

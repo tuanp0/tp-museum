@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+
 import styles from './BgImage.module.scss'
 
 interface BgImageInterface {
@@ -8,8 +9,8 @@ interface BgImageInterface {
         alt: string,
         width: number,
         height: number,
-        author: string
-    }[];
+        author: string,
+    }[],
 }
 
 const BgImage = ({data}:BgImageInterface) => {

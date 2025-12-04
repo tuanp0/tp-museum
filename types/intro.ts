@@ -12,4 +12,9 @@ export interface IntroInterface {
   news: {
     openText: string;
   };
+  video: {
+    url: string;
+    title: string;
+    author: string;
+  }
 }
