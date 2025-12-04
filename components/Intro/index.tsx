@@ -28,7 +28,6 @@ const Intro = () => {
       </div>
 
       <Container className={styles.container}>
-        {/* <h2 className={styles.introTitle}>{data.title}</h2> */}
         <svg className={styles.introTitle} width="450" height="120" viewBox="0 0 450 120">
           <defs>
             <path id="textPath" d="M10 130 C150 60 300 60 450 130"/>

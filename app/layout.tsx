@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
+import { MusicPlayerProvider } from '@/context/MusicPlayerContext'
 
-
-import Header from "@/components/Header"
+import Header from '@/components/Header'
+import MusicPlayer from '@/components/MusicPlayer'
 import Footer from '@/components/Footer'
 
-import "../styles/global.scss"
+import '../styles/global.scss'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <MusicPlayerProvider>
+          <Header />
+          {children}
+          <Footer />
+          <MusicPlayer />
+        </MusicPlayerProvider>
       </body>
     </html>
   )

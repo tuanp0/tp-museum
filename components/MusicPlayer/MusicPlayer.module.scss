@@ -1,0 +1,270 @@
+@use '../../styles/fonts.scss' as *;
+
+.musicplayer {
+  position: fixed;
+  bottom: 1.5rem;
+  right: -260px;
+  right: 1.5rem;
+  width: 260px;
+  padding: 1rem;
+  background: var(--black60);
+  border-radius: .75rem;
+  box-shadow: 10px 15px 25px -5px var(--black60);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--bluesea);
+  z-index: 1000;
+  transition: right .3s ease-in-out;
+
+  &.show {
+    right: 1.5rem;
+  }
+}
+
+.playerinfo {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: 16px;
+}
+
+.albumcover {
+  width: 48px;
+  height: 48px;
+  border-radius: .5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 6px var(--black40);
+}
+
+.songdetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.songtitle {
+  @include qsand(700);
+  color: var(--white);
+  font-size: .875rem;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.songartist {
+  @include qsand(500);
+  color: var(--sky);
+  font-size: .75rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  gap: 2px;
+  border-radius: .75rem;
+  padding: .25rem;
+  overflow: hidden;
+}
+
+.eqbar {
+  flex: 1;
+  background: linear-gradient(to top, var((--sky)), var(--bluesea));
+  border-radius: 2px;
+  min-height: 5%;
+}
+
+.eqbar.playing {
+  opacity: 0.8;
+}
+
+.eqbar:not(.playing) {
+  opacity: 0.3;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  margin-bottom: .5rem;
+}
+
+.controlbtn {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlbtn:hover {
+  color: var(--sky);
+  transform: scale(1.075);
+}
+
+.playbtn {
+  background: var(--white);
+  border-radius: 50%;
+  padding: .625rem;
+}
+
+.playbtn:hover {
+  background: var(--sky);
+  transform: scale(1.1);
+}
+
+.iconplay,
+.iconpause,
+.iconprevious,
+.iconnext,
+.iconvolume {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.playbtn .iconplay,
+.playbtn .iconpause {
+  filter: invert(1);
+}
+
+.iconplay::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 14px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.iconpause::before,
+.iconpause::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background: currentColor;
+}
+
+.iconpause::before {
+  left: 3px;
+}
+
+.iconpause::after {
+  right: 3px;
+}
+
+.iconprevious::before,
+.iconprevious::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconprevious::before {
+  left: 0px;
+  width: 3px;
+  height: 16px;
+  background: currentColor;
+}
+
+.iconprevious::after {
+  right: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 12px 8px 0;
+  border-color: transparent currentColor transparent transparent;
+}
+
+.iconnext::before,
+.iconnext::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iconnext::before {
+  left: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+.iconnext::after {
+  right: 0px;
+  width: 3px;
+  height: 16px;
+  background: currentColor;
+}
+
+.iconvolume {
+  width: 16px;
+  height: 16px;
+  background: url('/music/volume.svg') no-repeat center;
+  background-size: 100%;
+}
+
+.volumecontrol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sky);
+}
+
+.volumeslider {
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.volumeslider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--black40);
+}
+
+.volumeslider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--black40);
+}
+
+.volumepercentage {
+  font-size: 12px;
+  width: 16px;
+  text-align: right;
+}
