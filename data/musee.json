@@ -2,11 +2,11 @@
   "title": "<h2>Le Musee</h2>",
   "images": [
     {
-      "src": "/museum/arts.png",
-      "alt": "Arts",
-      "width": 1500,
-      "height": 971,
-      "author": "Cameron Mourot / Unsplash"
+      "src": "/museum/roger-ce-eblOzhJZx_4-unsplash.jpg",
+      "alt": "Librairie México",
+      "width": 1402,
+      "height": 636,
+      "author": "Roger Ce / Unsplash"
     }
   ],
   "slider": [

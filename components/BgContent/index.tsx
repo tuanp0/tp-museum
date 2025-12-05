@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import Image from 'next/image'
 import Container from '@/components/Container'
 import Title from '@/components/Title'

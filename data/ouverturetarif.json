@@ -1,0 +1,48 @@
+{
+  "ouverturetitle": "<h2>Ouvertures</h2>",
+  "ouverture": [
+    {
+      "key": "Lundi",
+      "value": "9h - 19h"
+    },
+    {
+      "key": "Mardi",
+      "value": "9h - 19h"
+    },
+    {
+      "key": "Mercredi",
+      "value": "9h - 19h"
+    },
+    {
+      "key": "Jeudi",
+      "value": "9h - 19h"
+    },
+    {
+      "key": "Vendredi",
+      "value": "9h - 21h"
+    },
+    {
+      "key": "Samedi",
+      "value": "9h - 21h"
+    },
+    {
+      "key": "Dimanche",
+      "value": "Fermé"
+    }
+  ],
+  "tariftitle": "<h2>Tarifs</h2>",
+  "tarif": [
+    {
+      "key": "Adulte",
+      "value": "6€ / visite"
+    },
+    {
+      "key": "Enfant",
+      "value": "2€ / visite"
+    },
+    {
+      "key": "Abonné",
+      "value": "32€ pour 1 an"
+    }
+  ]
+}

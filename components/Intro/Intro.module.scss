@@ -90,7 +90,7 @@
     &News {
         position: sticky;
         height: 0;
-        top: 250px;
+        top: 520px;
         padding: 0 var(--padding);
         max-width: var(--max-width);
         text-align: center;
@@ -151,26 +151,20 @@
 }
 
 .bgvideo {
-    position: relative;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: 0;
-    padding-bottom: 100dvh;
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
+    z-index: -1;
 
     &Iframe {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: auto;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        box-shadow: 0 0 30px 0 inset var(--black20);
-        transform: translateX(-50%);
 
         @supports (-webkit-touch-callout: none) {
             background-attachment: scroll;

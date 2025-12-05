@@ -6,14 +6,14 @@ import temoignagesData from '@/data/temoignages.json'
 import { TemoignagesInterface } from '@/types/temoignages'
 
 import Intro from '@/components/Intro'
-
+import TwoCols from '@/components/TwoCols'
+import OuvertureTarif from '@/components/OuvertureTarif'
 import Event from '@/components/Event'
 import BgContent from '@/components/BgContent'
 import Elevator from '@/components/Elevator'
 import Title from '@/components/Title'
 import SliderCards from '@/components/SliderCards'
 import BgImage from '@/components/BgImage'
-import BgVideo from '@/components/BgVideo'
 import Masonry from '@/components/Masonry'
 import SliderGallery from '@/components/SliderGallery'
 
@@ -22,10 +22,11 @@ export default function Home() {
 
   return (
     <main className={`main`}>
-      {/* <BgVideo data={IntroData.video}/> */}
       <Intro />
-      
-      <Event />
+      <TwoCols>
+        <OuvertureTarif />
+        <Event />
+      </TwoCols>
       <BgImage data={EventData.images}/>
       <BgContent data={MuseeData} bg={'blue'} waves>
         <Elevator text1={'RDC'} text2={'1er'} color={'white'} />
