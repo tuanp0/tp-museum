@@ -4,46 +4,30 @@
     position: relative;
     background: var(--white);
 
-    .bgcontentWaves {
-        path {
-            fill: var(--white);
-        }
-    }
-
     &.blue {
         background: var(--bluesea);
-
-        .bgcontentWaves {
-            path {
-                fill: var(--bluesea);
-            }
-        }
     }
 
     &.brown {
         background: var(--brown);
-
-        .bgcontentWaves {
-            path {
-                fill: var(--brown);
-            }
-        }
     }
 
     &.green {
         background: var(--darkgreen);
+    }
 
-        .bgcontentWaves {
-            path {
-                fill: var(--darkgreen);
-            }
-        }
+    &.white50 {
+        background: var(--white50);
+    }
+
+    &.black {
+        background: var(--almostblack);
     }
 
     &.paper {
         position: relative;
         z-index: 0;
-        background: var(--white);
+        background: var(--sand);
 
         &::before {
             position: absolute;
@@ -56,20 +40,6 @@
             z-index: -1;
             opacity: 0.7;
         }
-    }
-
-    // &.padding {
-    //     padding-bottom: var(--padding);
-    // }
-
-    &Waves {
-        position: absolute;
-        width: 100%;
-        height: 120px;
-        top: 1px;
-        left: 0;
-        transform: translateY(-100%);
-        pointer-events: none;
     }
 
     &.padding {

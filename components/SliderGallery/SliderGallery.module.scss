@@ -1,6 +1,10 @@
 @use '../../styles/fonts.scss' as *;
 
 .slidergallery {
+    &:last-child {
+        padding-bottom: 3rem;
+    }
+    
     &Slide {
         padding: 0.5rem;
         width: 220px;

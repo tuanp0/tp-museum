@@ -7,7 +7,7 @@
     &Content {
         display: grid;
         align-items: start;
-        gap: 1rem;
+        gap: 1.5rem;
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
         @media (min-width: 640px) {
@@ -15,16 +15,16 @@
         }
 
         @media (min-width: 768px) {
-            gap: 2rem;
+            gap: 3rem;
             grid-template-columns: repeat(4, minmax(0, 1fr));
         }
     }
 
     &Item {
         position: relative;
-        border-radius: 8px;
+        border-radius: 2px;
         overflow: hidden;
-        box-shadow: 0 0 10px 1px var(--black60);
+        box-shadow: 0 0 10px 1px var(--black40);
 
         &Img {
             width: 100%;

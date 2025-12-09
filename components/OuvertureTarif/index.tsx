@@ -6,7 +6,7 @@ import styles from "./OuvertureTarif.module.scss"
 
 const OuvertureTarif: React.FC = () => {
   const data: OuvertureTarifInterface = OuvertureTarifData
-  console.log(data)
+
   return (
     <div className={styles.ouverture}>
       <div className={styles.ouvertureInner}>

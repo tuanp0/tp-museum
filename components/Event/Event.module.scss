@@ -4,7 +4,7 @@
 .event {
     position: relative;
     padding-bottom: 4rem;
-    background: var(--white);
+    // background: var(--white);
 
     &Title {
         @include wysiwyg();
@@ -73,6 +73,7 @@
         width: 100%;
         border-radius: 0 0 24px 0;
         padding: 1.25rem 1.25rem 1.25rem 2.25rem;
+        background: var(--white);
         border: 2px solid var(--black);
         box-shadow: 0 0 10px -3px var(--black60);
 
@@ -84,12 +85,12 @@
 
     &Name {
         @include museo(700);
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.25;
         margin-bottom: 0.5rem;
 
         @media screen and (min-width:768px) {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -98,12 +99,13 @@
         margin-bottom: 1rem;
         
         @media screen and (min-width:768px) {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
         }
     }
 
     &Link {
         @include qsand(700);
+        font-size: .875rem;
         color: var(--white);
         padding: .5rem 1.25rem;
         margin-top: 0.75rem;

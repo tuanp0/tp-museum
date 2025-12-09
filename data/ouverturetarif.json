@@ -3,27 +3,27 @@
   "ouverture": [
     {
       "key": "Lundi",
-      "value": "9h - 19h"
+      "value": "9:00 - 19:00"
     },
     {
       "key": "Mardi",
-      "value": "9h - 19h"
+      "value": "9:00 - 19:00"
     },
     {
       "key": "Mercredi",
-      "value": "9h - 19h"
+      "value": "9:00 - 19:00"
     },
     {
       "key": "Jeudi",
-      "value": "9h - 19h"
+      "value": "9:00 - 19:00"
     },
     {
       "key": "Vendredi",
-      "value": "9h - 21h"
+      "value": "9:00 - 21:00"
     },
     {
       "key": "Samedi",
-      "value": "9h - 21h"
+      "value": "9:00 - 21:00"
     },
     {
       "key": "Dimanche",
