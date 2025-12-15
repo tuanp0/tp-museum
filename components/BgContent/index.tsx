@@ -12,12 +12,13 @@ interface BgContentInterface {
   },
   waves?: boolean
   bg?: string,
-  padding?: boolean,
+  paddingT?: boolean,
+  paddingB?: boolean,
   noContainer?: boolean,
   children?: ReactNode,
 }
 
-const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentInterface) => {
+const BgContent = ({data, bg, waves, paddingT, paddingB, noContainer, children}:BgContentInterface) => {
   return (
     <section className={`
       ${styles.bgcontent}
@@ -27,7 +28,8 @@ const BgContent = ({data, bg, waves, padding, noContainer, children}:BgContentIn
         bg === 'white50' ? styles.white50 :
         bg === 'black' ? styles.black :
         bg === 'paper' ? styles.paper : ''}
-      ${padding ? styles.padding : ''}
+      ${paddingT ? styles.paddingt : ''}
+      ${paddingB ? styles.paddingb : ''}
     `}>
       {waves &&  <Waves color={bg}/>}
 

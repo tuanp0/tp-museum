@@ -5,11 +5,18 @@ import styles from './Paragraph.module.scss'
 
 interface ParagraphInterface {
     paragraph?: string,
+    color?: string,
+    paddingT?: boolean,
 }
 
-const Paragraph = ({paragraph}:ParagraphInterface) => {
+const Paragraph = ({paragraph, color, paddingT}:ParagraphInterface) => {
   return (
-    <div className={styles.paragraph}>
+    <div
+      className={`
+        ${styles.paragraph}
+        ${color === 'white' ? styles.white : ''}
+        ${paddingT? styles.paddingt : ''}
+      `}>
         <Container className={styles.container}>
             <div className={styles.paragraphInner} dangerouslySetInnerHTML={{__html:paragraph ?? ''}}/>
         </Container>

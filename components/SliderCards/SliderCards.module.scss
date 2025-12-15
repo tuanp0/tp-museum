@@ -4,6 +4,7 @@
 
     .container {
         padding-top: 0;
+        padding-bottom: 5rem;
     }
     
     &Slider {
@@ -17,6 +18,7 @@
     &Slide {
         background: var(--white);
         border-radius: 0 0 24px 0;
+        border: 1Px solid var(--black);
     }
 
     &Imgcontainer {
@@ -55,7 +57,7 @@
         display: flex;
         justify-content: flex-end;
         gap: 1.5rem;
-        padding: 2rem 0 1rem 0;
+        padding: 2rem 0 2rem 0;
 
         [disabled] {
             opacity: 0.4;
@@ -70,7 +72,7 @@
             justify-content: center;
             align-items: center;
             border-radius: 100%;
-            border: 1px solid var(--white);
+            border: 1px solid var(--black);
             background: var(--white);
             cursor: pointer;
             transition: 0.3s ease-in-out;
@@ -80,7 +82,17 @@
 
                 .slidercardsNavArrow {
                     path {
-                        stroke: var(--white);
+                        transform: translateX(2px);
+                    }
+                }
+            }
+        }
+
+        &Prev {
+            &:hover {
+                .slidercardsNavArrow {
+                    path {
+                        transform: translateX(-2px);
                     }
                 }
             }
@@ -93,7 +105,8 @@
 
             path {
                 stroke: var(--black);
-                transition: 0.3s ease-in-out;
+                transform-origin: 50%;
+                transition: 0.2s ease-in-out;
             }
         }
     }

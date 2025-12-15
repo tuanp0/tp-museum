@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     padding: .5rem 0;
-    border-top: 8px solid var(--darkblue);
+    border-top: 4px solid var(--darkblue);
     z-index: 100;
     transition: 
         padding 0.3s ease-in-out,
@@ -13,9 +13,13 @@
         -webkit-backdrop-filter 0.3s ease-in-out,
         backdrop-filter 0.3s ease-in-out;
 
+    @media screen and (min-width:992px) {
+        border-radius: 0 0 16px 16px;
+    }
+
     &.opened {
         height: 100vh;
-        background: var(--bluesea70);
+        background: var(--black60);
         -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
 
@@ -28,18 +32,18 @@
     }
 
     &.scrolled {
-        background: var(--bluesea40);
+        background: var(--black40);
         -webkit-backdrop-filter: blur(6px);
         backdrop-filter: blur(6px);
 
         &.opened {
-            background: var(--bluesea70);
+            background: var(--black60);
         }
 
         @media screen and (min-width:992px) {
             
             &.opened {
-                background: var(--bluesea40);
+                background: var(--black40);
             }
         }
     }
@@ -210,12 +214,12 @@
             &::before {
                 position: absolute;
                 content: '';
-                width: 38px;
-                height: 38px;
+                width: 34px;
+                height: 34px;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
-                background: var(--white30);
+                background: var(--white50);
                 border-radius: 100%;
                 z-index: -1;
                 transition: all 0.2s ease-in-out;
@@ -234,7 +238,7 @@
 
         &X{
             width: auto;
-            height: 18px;
+            height: 16px;
             display: block;
             transition: all 0.2s ease-in-out;
         }
@@ -242,14 +246,14 @@
         &Ig,
         &Fb {
             width: auto;
-            height: 22px;
+            height: 20px;
             display: block;
             transition: all 0.2s ease-in-out;
         }
 
         &Yt {
             width: auto;
-            height: 28px;
+            height: 26px;
             display: block;
             transition: all 0.2s ease-in-out;
         }
@@ -260,8 +264,8 @@
 
                 .headerRsItem{
                     &::before {
-                        width: 32px;
-                        height: 32px;
+                        width: 30px;
+                        height: 30px;
                     }
                 }
 

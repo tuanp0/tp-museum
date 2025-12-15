@@ -1,6 +1,7 @@
 {
   "title": "<h2>Le Musee</h2>",
-  "text": "<p>Le rez-de-chaussée réunit des œuvres historiques soigneusement mises en scène : sculptures anciennes, fresques restaurées, objets d’époque et installations audio-visuelles racontant l’évolution de notre patrimoine. Chaque pièce est pensée pour captiver le visiteur, qu’il soit curieux, passionné d’Histoire ou simple flâneur, grâce à des dispositifs immersifs qui rendent l’expérience à la fois instructive et étonnamment vivante.</p><p>Au premier étage, l’ambiance change et invite à l’interaction. Des œuvres numériques, des espaces sensoriels et des ateliers innovants permettent au public d’explorer l’art autrement. Qu’il s’agisse d’écrans tactiles, de projections à 360°, de structures réactives ou de parcours ludiques, chaque installation encourage la participation et suscite l’émerveillement. Ensemble, ces deux étages forment un musée où la découverte se fait naturellement, porté par des œuvres aussi originales qu’attirantes.</p>",
+  "text": "<p>Le <strong>rez-de-chaussée</strong> réunit des œuvres historiques soigneusement mises en scène : sculptures anciennes, fresques restaurées, objets d’époque et installations audio-visuelles racontant l’évolution de notre patrimoine. Chaque pièce est pensée pour captiver le visiteur, qu’il soit curieux, passionné d’Histoire ou simple flâneur, grâce à des dispositifs immersifs qui rendent l’expérience à la fois instructive et étonnamment vivante.</p>",
+  "text2": "<p>Au <strong>premier étage</strong>, l’ambiance change et invite à l’interaction. Des œuvres numériques, des espaces sensoriels et des ateliers innovants permettent au public d’explorer l’art autrement. Qu’il s’agisse d’écrans tactiles, de projections à 360°, de structures réactives ou de parcours ludiques, chaque installation encourage la participation et suscite l’émerveillement. Ensemble, ces deux étages forment un musée où la découverte se fait naturellement, porté par des œuvres aussi originales qu’attirantes.</p>",
   "images": [
     {
       "src": "/museum/roger-ce-eblOzhJZx_4-unsplash.jpg",
@@ -65,6 +66,13 @@
       "category": "Art",
       "date": "Permanente",
       "link": ""
+    }
+  ],
+  "video": [
+    {
+      "url": "/limelight.webm",
+      "title": "Circle of Life / Breathtaking Immersive Experience of Nature and Light",
+      "author": "Limelight / Youtube"
     }
   ]
 }

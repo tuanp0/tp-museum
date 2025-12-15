@@ -1,3 +1,4 @@
+@use "sass:math";
 @use '../../styles/fonts.scss' as *;
 
 .slidergallery {
@@ -19,7 +20,7 @@
             position: relative;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 12px 2px rgba(245, 243, 225, 0.5) inset;
             background: var(--white);
-            padding: 1rem 1rem 0 1rem;
+            padding: .75rem .75rem 0 .75rem;
             z-index: 0;
             transition: box-shadow 0.2s ease-in-out;
 
@@ -72,8 +73,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        // padding: 0.75rem 0 1rem 0;
         border-radius: 0.25rem;
+        transform: rotate(#{math.random(9) - 5}deg);
+        transform-origin: center;
 
         &.fontOne {
             @include caveat();
@@ -95,6 +97,16 @@
 
         &Inner {
             text-align: center;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        .slidergallerySlide:nth-child(#{$i}) {
+            transform: rotate(#{math.random(9) - 5}deg);
+
+            .slidergalleryText {
+                transform: rotate(#{math.random(7) - 5}deg);
+            }
         }
     }
 }

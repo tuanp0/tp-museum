@@ -42,7 +42,7 @@ const SliderGalery = ({ data, reverse, page }:SliderGalleryProps) => {
           <Swiper
             className={`slidergallerySlider ${styles.slidergallerySlider}`}
             modules={[Autoplay, Scrollbar, A11y]}
-            freeMode={true}
+            // freeMode={true}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
