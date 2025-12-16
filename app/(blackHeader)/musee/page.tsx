@@ -4,7 +4,7 @@ import TitleTextVisuel from '@/components/TitleTextVisuel'
 
 const Musee = () => {
   return (
-    <main className={`main padding`}>
+    <main className={`main padding sand`}>
         <TitleTextVisuel data={histoireData} />
     </main>
   )

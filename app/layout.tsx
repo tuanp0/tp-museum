@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <MusicPlayerProvider>
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
           <MusicPlayer />

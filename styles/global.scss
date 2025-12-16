@@ -24,8 +24,14 @@ a {
   text-decoration: none;
 }
 
-.main.padding {
-  padding-top: 7rem;
+.main {
+  &.padding {
+    padding-top: 7rem;
+  }
+
+  &.sand {
+    background-color: var(--sand);
+  }
 }
 
 .author {

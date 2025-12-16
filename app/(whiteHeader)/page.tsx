@@ -5,6 +5,7 @@ import LibrairieData from '@/data/librairie.json'
 import temoignagesData from '@/data/temoignages.json'
 import { TemoignagesInterface } from '@/types/temoignages'
 
+import Header from '@/components/Header'
 import Intro from '@/components/Intro'
 import TwoCols from '@/components/TwoCols'
 import OuvertureTarif from '@/components/OuvertureTarif'
@@ -44,6 +45,7 @@ export default function Home() {
       <BgContent data={LibrairieData} bg={`paper`} paddingB>
         <Elevator text1={'2ème'} text2={'étage'} />
         <Title title={LibrairieData.title} />
+        <Paragraph paragraph={LibrairieData.text} />
         <Masonry images={LibrairieData.images} />
       </BgContent>
       <BgContent data={dataTemoignages} bg={'brown'} waves noContainer paddingB>

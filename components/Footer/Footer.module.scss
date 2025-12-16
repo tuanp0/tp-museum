@@ -1,4 +1,151 @@
+@use "../../styles/fonts" as *;
+@use "../../styles/mixins" as *;
+
 .footer {
-    position: relative;
-    background: var(--grey);
+    @include qsand();
+    color: var(--white);
+    background-color: var(--black);
+    padding: 2rem 1rem 2rem 1rem;
+    @media screen and (min-width: 768px) {
+        padding: 2rem 1rem 1.5rem 1rem;
+    }
+
+    &Container {
+        padding: 0 var(--padding) !important;
+    }
+
+    &First {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width:768px) {
+            gap: 4rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &Desc {
+        width: 100%;
+            
+        @media screen and (min-width:768px) {
+            width: 33.33%;
+        }
+
+        &Title {
+            @include museo();
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        &Subtitle {
+            @include museo();
+            font-size: 1.375rem;
+            color: var(--white);
+        }
+
+        &Text {
+            @include wysiwyg();
+
+            p {
+                font-size: 0.875rem;
+                color: var(--white-80);
+            }
+        }
+    }
+
+    &Nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width:768px) {
+            gap: 2.5rem;
+            width: calc(66.66% - 4rem);
+            margin-top: 3.25rem;
+        }
+    }
+
+    &Ul {
+        width: calc(50% - 0.75rem);
+        list-style-type: none;
+
+        @media screen and (min-width:768px) {
+            width: calc(50% - 1.25rem);
+        }
+    }
+
+    &Link {
+        padding: .25rem 0;
+        line-height: 1.25rem;
+        text-decoration: underline;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &Second {
+        color: var(--grey);
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width:992px) {
+            width: 66%;
+            margin: 0 auto 2rem auto;
+        }
+    }
+
+    &Credit {
+        margin-bottom: 0.25rem;
+    }
+
+    &External {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &Third {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &Copyright {
+        font-size: .875rem;
+        width: 100%;
+        text-align: center;
+        order: 2;
+
+        @media screen and (min-width:992px) {
+            width: auto;
+            order: 1;
+        }
+    }
+        
+    &Disclaimer {
+        color: var(--grey);
+        font-size: .75rem;
+        line-height: 1.25;
+        text-align: center;
+        order: 1;
+
+        @media screen and (min-width:992px) {
+            order: 2;
+        }
+    }
+}
+
+.credit {
+    font-size: .875rem;
+    // color: var(--grey);
 }
