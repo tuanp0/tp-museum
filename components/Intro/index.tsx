@@ -1,5 +1,7 @@
 import introData from '@/data/intro.json'
+import ouvertureTarifData from '@/data/ouverturetarif.json'
 import { IntroInterface } from '@/types/intro'
+import { OuvertureTarifInterface } from '@/types/ouverturetarif'
 import React from 'react'
 import Image from 'next/image'
 import Container from '@/components/Container'
@@ -8,9 +10,15 @@ import styles from './Intro.module.scss'
 
 const Intro = () => {
   const data: IntroInterface = introData
+  const dataOuverture: OuvertureTarifInterface = ouvertureTarifData
   const today = new Date()
-  const dayName = today.toLocaleDateString('fr-FR')
+  const dayDate = today.toLocaleDateString('fr-FR')
+  const dayName = today.toLocaleDateString('fr-FR', { weekday: 'long' })
 
+  const dayNameCapitalize = dayName.charAt(0).toUpperCase() + dayName.slice(1)
+  const hoursToday = ouvertureTarifData.ouverture.find(item => item.key === dayNameCapitalize) || { key: '', value: 'Horaires non disponibles' }
+  const statusToday = hoursToday.value === 'Fermé' ? 'fermé' : 'ouvert'
+  
   return (
     <section className={styles.intro}>
       <div className={styles.bgvideo}>
@@ -43,15 +51,23 @@ const Intro = () => {
         </p>
       </Container>
 
-        {/* <div className={styles.introMuseum}>
-          <Image src={data.image.src} alt={data.image.alt} width={833} height={600} className={styles.introMuseumImg} />
-          <span className={`author ${styles.introMuseumAuthor}`}>{data.image.author}</span>
-        </div> */}
-
       <div className={styles.introNews}>
         <div className={styles.introNewsContent}>
-          <span className={styles.introNewsDate}>{dayName}</span>
-          <p className={styles.introNewsText}>{data.news.openText.replace('{time}', '9:00 à 19:00')}</p>
+          <span className={styles.introNewsDate}>{dayDate}</span>
+          <p className={styles.introNewsText}>
+            {
+              statusToday === "fermé" ? (
+                data.news.openText
+                  .replace('{status}', statusToday)
+                  .replace(' de {time}', '. Il sera ouvert demain de 9:00 à 19:00')
+              ) : (
+                data.news.openText
+                  .replace('{status}', statusToday)
+                  .replace('{time}', hoursToday.value)
+                  .replace('-', 'à')
+              )
+            }
+          </p>
         </div>
       </div>
 

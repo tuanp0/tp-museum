@@ -10,7 +10,7 @@
     "author": "Heriberto Murrieta / Unsplash"
   },
   "news": {
-    "openText": "Le musée est ouvert aujourd'hui de {time}"
+    "openText": "Le musée est {status} aujourd'hui de {time}"
   },
   "video": {
     "url": "/phillchng.webm",
