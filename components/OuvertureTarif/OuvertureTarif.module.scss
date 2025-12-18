@@ -48,6 +48,17 @@
     &Title {
         @include wysiwyg();
         text-align: left;
+
+        &.white {
+            h2 {
+                color: var(--white);
+
+                &::before,
+                &::after {
+                    background: var(--white);
+                }
+            }
+        }
     }
 
     &Content {

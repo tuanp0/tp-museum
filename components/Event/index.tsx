@@ -5,12 +5,16 @@ import Link from 'next/link'
 
 import styles from "./Event.module.scss"
 
-const Event: React.FC = () => {
+interface EventProps {
+  color?: string;
+}
+
+const Event = ({color}:EventProps) => {
   const data: EventsInterface = eventData
 
   return (
     <div className={styles.event}>
-      <div className={styles.eventTitle} dangerouslySetInnerHTML={{__html: data.title}} />
+      <div className={`${styles.eventTitle} ${color === 'white' ? styles.white : ''}`} dangerouslySetInnerHTML={{__html: data.title}} />
       {data.events.map((event, index) => (
         <div key={index} className={styles.eventContent}>
           <div className={styles.eventDate}>

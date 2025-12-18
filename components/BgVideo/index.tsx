@@ -1,20 +1,22 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 import styles from './BgVideo.module.scss'
 
 interface BgVideoInterface {
+  fixed?: boolean,
   data: {
     url: string;
     title: string;
     author: string
   }[],
+  children?: ReactNode
 }
 
-const BgVideo = ({data}:BgVideoInterface) => {
+const BgVideo = ({fixed, data, children}:BgVideoInterface) => {
   return (
-    <div className={styles.bgvideo}>
+    <div className={`${styles.bgvideo} ${fixed ? styles.fixed : ''}`}>
       {data.map((item, index) => (
-        <div key={index}>
+        <div className={styles.bgvideoInner} key={index}>
           <video
             className={styles.bgvideoIframe}
             autoPlay
@@ -28,6 +30,11 @@ const BgVideo = ({data}:BgVideoInterface) => {
           <span className={`author`}>{item.author}</span>
         </div>
       ))}
+      {children && (
+        <div className={styles.bgvideoContent}>
+          {children}
+        </div>
+      )}
     </div>
   )
 }

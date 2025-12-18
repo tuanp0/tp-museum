@@ -2,6 +2,12 @@
 
 .paragraph {
 
+    &.scale {
+        transition: transform 0.1s ease-out;
+        transform-origin: center center;
+        will-change: transform;
+    }
+
     &.paddingt {
         padding-top: 3rem;
     }
@@ -26,6 +32,11 @@
         p {
             .white & {
                 color: var(--white);
+            }
+
+            .scale & {
+                font-weight: bold;
+                line-height: 1.5;
             }
         }
     }

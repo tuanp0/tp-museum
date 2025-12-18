@@ -1,25 +1,50 @@
 .bgvideo {
-    position: relative;
-    height: 0;
-    padding-bottom: 600px;
-    overflow: hidden;
-    pointer-events: none;
+    height: auto;
+    // overflow: visible;
+
+    &Inner {
+        position: relative;
+        min-height: 600px;
+        // overflow: hidden;
+        pointer-events: none;
+
+        .fixed & {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+        }
+    }
 
     &Iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
-        // background-size: cover;
-        // background-position: center;
-        // background-attachment: fixed;
-        // transform: translateX(-50%);
+        z-index: -1;
 
         @supports (-webkit-touch-callout: none) {
             background-attachment: scroll;
         }
+    }
+
+    &Content {
+        position: relative;
+        z-index: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40dvh;
+        padding: 8rem 0;
+        margin-top: -50dvh;
+        background: linear-gradient(
+            to bottom, 
+            transparent 0%,
+            var(--black40) 12%,
+            var(--black40) 50%,
+            var(--black40) 90%,
+            transparent 100%
+        );
     }
 }

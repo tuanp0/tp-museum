@@ -4,13 +4,17 @@ import React from 'react'
 
 import styles from "./OuvertureTarif.module.scss"
 
-const OuvertureTarif: React.FC = () => {
+interface OuvertureInterfaceProps {
+  color?: string;
+}
+
+const OuvertureTarif = ({color}:OuvertureInterfaceProps) => {
   const data: OuvertureTarifInterface = OuvertureTarifData
 
   return (
     <div className={styles.ouverture}>
       <div className={styles.ouvertureInner}>
-        <div className={styles.ouvertureTitle} dangerouslySetInnerHTML={{__html: data.ouverturetitle}} />
+        <div className={`${styles.ouvertureTitle} ${color === 'white' ? styles.white : ''}`} dangerouslySetInnerHTML={{__html: data.ouverturetitle}} />
         <div className={styles.ouvertureContent}>
           {data.ouverture.map((day, index) => (
             <div key={index} className={styles.ouvertureSolo}>
@@ -21,7 +25,7 @@ const OuvertureTarif: React.FC = () => {
         </div>
       </div>
       <div className={styles.ouvertureInner}>
-        <div className={styles.ouvertureTitle} dangerouslySetInnerHTML={{__html: data.tariftitle}} />
+        <div className={`${styles.ouvertureTitle} ${color === 'white' ? styles.white : ''}`} dangerouslySetInnerHTML={{__html: data.tariftitle}} />
         <div className={styles.ouvertureContent}>
           {data.tarif.map((price, index) => (
             <div key={index} className={styles.ouvertureSolo}>

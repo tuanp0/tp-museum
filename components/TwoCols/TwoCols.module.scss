@@ -1,8 +1,88 @@
 .twocols {
-    // position: relative;
-    background: var(--white70);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
+    position: relative;
+    background: var(--white);
+
+    &.black80 {
+        background: var(--black80);
+    }
+
+    &.black80.gradient {
+        background: linear-gradient(
+            to bottom, 
+            transparent 0%,
+            var(--black60) 25%,
+            var(--black80) 100%
+        );
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: linear-gradient(to bottom, 
+        //         transparent 0%, 
+        //         red 70%
+        //     );
+        //     -webkit-backdrop-filter: blur(2px);
+        //     backdrop-filter: blur(2px);
+        //     z-index: -1;
+        // }
+        
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: linear-gradient(to bottom, 
+        //         transparent 0%, 
+        //         transparent 50%,
+        //         trnasparent 100%
+        //     );
+        //     -webkit-backdrop-filter: blur(6px);
+        //     backdrop-filter: blur(6px);
+        //     z-index: -1;
+        // }
+    }
+    
+    &.white70 {
+        background: var(--white70);
+        // -webkit-backdrop-filter: blur(6px);
+        // backdrop-filter: blur(6px);
+    }
+
+    &.white70.gradient {
+        background: linear-gradient(
+            to top, 
+            transparent 0%,
+            var(--white50) 40%,
+            var(--white50) 100%
+        );
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: linear-gradient(to bottom, 
+        //     transparent 0%, 
+        //     var(--white50) 100%
+        //     );
+        //     // -webkit-backdrop-filter: blur(2px);
+        //     // backdrop-filter: blur(2px);
+        //     z-index: -1;
+        // }
+        
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     inset: 0;
+        //     background: linear-gradient(to bottom, 
+        //     transparent 0%, 
+        //     transparent 50%,
+        //     var(--white50) 100%
+        //     );
+        //     // -webkit-backdrop-filter: blur(6px);
+        //     // backdrop-filter: blur(6px);
+        //     z-index: -1;
+        // }
+    }
 
     .container {
         display: flex;

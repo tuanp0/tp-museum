@@ -26,21 +26,27 @@ export default function Home() {
   return (
     <main className={`main`}>
       <Intro />
-      <TwoCols waves bg={'white70'}>
-        <OuvertureTarif />
-        <Event />
+      <TwoCols bg={'black80'} gradient>
+        <OuvertureTarif color={'white'} />
+        <Event color={'white'} />
       </TwoCols>
-      <BgImage data={EventData.images}/>
-      <BgContent data={MuseeData} bg={'white'} waves>
-        <Elevator text1={'Rez de'} text2={'chausée'} color={'black'} />
-        <Title title={MuseeData.title} color={'black'} />
-        <Paragraph paragraph={MuseeData.text} color={'black'}/>
+      <BgContent data={MuseeData} bg={'black'} waves>
+        <Elevator text1={'Rez de'} text2={'chausée'} color={'white'} />
+        <Title title={MuseeData.title} color={'white'} />
+        <Paragraph paragraph={MuseeData.text} color={'white'}/>
         <SliderCards slider={MuseeData.slider} />
+        <BgImage data={EventData.images}/>
       </BgContent>
       <BgContent data={MuseeData} bg={'black'} waves>
         <Elevator text1={'1er'} text2={'etage'} color={'white'} />
         <Paragraph paragraph={MuseeData.text2} color={'white'} paddingT />
-        <BgVideo data={MuseeData.video}/>
+        <BgVideo data={MuseeData.video} fixed>
+          <Paragraph paragraph={MuseeData.catchup[0].text} color={'white'} scale />
+          <Paragraph paragraph={MuseeData.catchup[1].text} color={'white'} scale />
+          <Paragraph paragraph={MuseeData.catchup[2].text} color={'white'} scale />
+          <Paragraph paragraph={MuseeData.catchup[3].text} color={'white'} scale />
+          <Paragraph paragraph={MuseeData.catchup[4].text} color={'white'} scale />
+        </BgVideo>
       </BgContent>
       <BgContent data={LibrairieData} bg={`paper`} paddingB>
         <Elevator text1={'2ème'} text2={'étage'} />
