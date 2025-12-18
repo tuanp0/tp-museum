@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import Container from '@/components/Container'
 
 import styles from './BgVideo.module.scss'
 
@@ -32,7 +33,9 @@ const BgVideo = ({fixed, data, children}:BgVideoInterface) => {
       ))}
       {children && (
         <div className={styles.bgvideoContent}>
-          {children}
+          <Container className={styles.container}>
+            {children}
+          </Container>
         </div>
       )}
     </div>
