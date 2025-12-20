@@ -26,9 +26,9 @@ export default function Home() {
   return (
     <main className={`main`}>
       <Intro />
-      <TwoCols bg={'black80'} gradient>
-        <OuvertureTarif color={'white'} />
-        <Event color={'white'} />
+      <TwoCols bg={'white70'} gradient>
+        <OuvertureTarif color={'black'} />
+        <Event color={'black'} />
       </TwoCols>
       <BgContent data={MuseeData} bg={'black'} waves>
         <Elevator text1={'Rez de'} text2={'chausée'} color={'white'} />

@@ -1,6 +1,7 @@
 .twocols {
     position: relative;
     background: var(--white);
+    padding-top: 4rem;
 
     &.black80 {
         background: var(--black80);
@@ -50,10 +51,10 @@
 
     &.white70.gradient {
         background: linear-gradient(
-            to top, 
+            to bottom, 
             transparent 0%,
-            var(--white50) 40%,
-            var(--white50) 100%
+            var(--white50) 15%,
+            var(--white70) 100%
         );
 
         // &::before {

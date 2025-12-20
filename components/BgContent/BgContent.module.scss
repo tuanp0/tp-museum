@@ -3,6 +3,7 @@
 .bgcontent {
     position: relative;
     background: var(--white);
+    z-index: 0;
 
     &.blue {
         background: var(--bluesea);

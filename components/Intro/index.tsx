@@ -23,14 +23,14 @@ const Intro = () => {
     <section className={styles.intro}>
       <div className={styles.bgvideo}>
         <video
-            className={styles.bgvideoIframe}
-            autoPlay
-            loop
-            muted
-            playsInline
+          className={styles.bgvideoIframe}
+          autoPlay
+          loop
+          muted
+          playsInline
         >
-            <source src={data.video.url} type="video/webm" />
-            Your browser does not support the video tag.
+          <source src={data.video.url} type="video/webm" />
+          Your browser does not support the video tag.
         </video>
         <span className={`author`}>{data.video.author}</span>
       </div>
@@ -59,7 +59,7 @@ const Intro = () => {
               statusToday === "fermé" ? (
                 data.news.openText
                   .replace('{status}', statusToday)
-                  .replace(' de {time}', '. Il sera ouvert demain de 9:00 à 19:00')
+                  .replace(' de {time}', '. Il sera ouvert Lundi de 9:00 à 19:00')
               ) : (
                 data.news.openText
                   .replace('{status}', statusToday)

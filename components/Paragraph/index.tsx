@@ -47,7 +47,7 @@ const Paragraph = ({paragraph, color, paddingT, scale}:ParagraphInterface) => {
 
       const distanceFromCenter = (elementCenter - viewportCenter) / viewportCenter
 
-      const maxScale = 1.15
+      const maxScale = 1.2
       const minScale = 1
       
       const newScale = maxScale - Math.abs(distanceFromCenter) * (maxScale - minScale)
